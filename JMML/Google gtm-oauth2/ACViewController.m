@@ -55,7 +55,9 @@
     [[self navigationController] setNavigationBarHidden:YES] ;
 }
 
-- (IBAction)logIn {
+
+//  Oauth 2.0 Authentication code
+- (IBAction)authenticate {
     
     // Display the authentication view
     GTMOAuth2ViewControllerTouch *web_authentication_VC;
@@ -69,6 +71,7 @@
     // --> this will change the screen the the UIWebView of Google GTM instantiated with authorization URL
     [[self navigationController] setNavigationBarHidden:NO] ;
     [[self navigationController] pushViewController:web_authentication_VC animated:YES];
+    
 }
 
 

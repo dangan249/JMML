@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86D48D4915DC06C00098A176 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D48D3015DC05D30098A176 /* libRestKit.a */; };
 		86F8580815DBED7C00A3BF15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F8580715DBED7C00A3BF15 /* UIKit.framework */; };
 		86F8580A15DBED7C00A3BF15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F8580915DBED7C00A3BF15 /* Foundation.framework */; };
 		86F8580C15DBED7C00A3BF15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F8580B15DBED7C00A3BF15 /* CoreGraphics.framework */; };
@@ -20,9 +21,93 @@
 		86F8582815DBED7C00A3BF15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F8580915DBED7C00A3BF15 /* Foundation.framework */; };
 		86F8583015DBED7C00A3BF15 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86F8582E15DBED7C00A3BF15 /* InfoPlist.strings */; };
 		86F8583315DBED7C00A3BF15 /* JMMLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8583215DBED7C00A3BF15 /* JMMLTests.m */; };
+		86F8584115DBEE0C00A3BF15 /* appconnect-api.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8583E15DBEE0C00A3BF15 /* appconnect-api.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		86F8584215DBEE0C00A3BF15 /* appconnect-api.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8583E15DBEE0C00A3BF15 /* appconnect-api.m */; };
+		86F8584315DBEE0C00A3BF15 /* enunciate-common.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8584015DBEE0C00A3BF15 /* enunciate-common.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		86F8584415DBEE0C00A3BF15 /* enunciate-common.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8584015DBEE0C00A3BF15 /* enunciate-common.m */; };
+		86F8584F15DBEE1700A3BF15 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8584715DBEE1700A3BF15 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		86F8585015DBEE1700A3BF15 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8584715DBEE1700A3BF15 /* GTMHTTPFetcher.m */; };
+		86F8585115DBEE1700A3BF15 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8584915DBEE1700A3BF15 /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		86F8585215DBEE1700A3BF15 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8584915DBEE1700A3BF15 /* GTMOAuth2Authentication.m */; };
+		86F8585315DBEE1700A3BF15 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8584B15DBEE1700A3BF15 /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		86F8585415DBEE1700A3BF15 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8584B15DBEE1700A3BF15 /* GTMOAuth2SignIn.m */; };
+		86F8585515DBEE1700A3BF15 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8584D15DBEE1700A3BF15 /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		86F8585615DBEE1700A3BF15 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8584D15DBEE1700A3BF15 /* GTMOAuth2ViewControllerTouch.m */; };
+		86F8585715DBEE1700A3BF15 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F8584E15DBEE1700A3BF15 /* GTMOAuth2ViewTouch.xib */; };
+		86F8585815DBEE1700A3BF15 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F8584E15DBEE1700A3BF15 /* GTMOAuth2ViewTouch.xib */; };
+		86F8587B15DBEE5300A3BF15 /* ACContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8585E15DBEE5200A3BF15 /* ACContact.m */; };
+		86F8587C15DBEE5300A3BF15 /* ACContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8585E15DBEE5200A3BF15 /* ACContact.m */; };
+		86F8587D15DBEE5300A3BF15 /* ACContactConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586015DBEE5200A3BF15 /* ACContactConnection.m */; };
+		86F8587E15DBEE5300A3BF15 /* ACContactConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586015DBEE5200A3BF15 /* ACContactConnection.m */; };
+		86F8587F15DBEE5300A3BF15 /* ACContactDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586215DBEE5200A3BF15 /* ACContactDetailsController.m */; };
+		86F8588015DBEE5300A3BF15 /* ACContactDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586215DBEE5200A3BF15 /* ACContactDetailsController.m */; };
+		86F8588115DBEE5300A3BF15 /* ACContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586415DBEE5200A3BF15 /* ACContactList.m */; };
+		86F8588215DBEE5300A3BF15 /* ACContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586415DBEE5200A3BF15 /* ACContactList.m */; };
+		86F8588315DBEE5300A3BF15 /* ACContactListConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586615DBEE5200A3BF15 /* ACContactListConnection.m */; };
+		86F8588415DBEE5300A3BF15 /* ACContactListConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586615DBEE5200A3BF15 /* ACContactListConnection.m */; };
+		86F8588515DBEE5300A3BF15 /* ACContactListPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586815DBEE5200A3BF15 /* ACContactListPickerViewController.m */; };
+		86F8588615DBEE5300A3BF15 /* ACContactListPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586815DBEE5200A3BF15 /* ACContactListPickerViewController.m */; };
+		86F8588715DBEE5300A3BF15 /* ACContactListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586A15DBEE5200A3BF15 /* ACContactListStore.m */; };
+		86F8588815DBEE5300A3BF15 /* ACContactListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586A15DBEE5200A3BF15 /* ACContactListStore.m */; };
+		86F8588915DBEE5300A3BF15 /* ACContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586C15DBEE5200A3BF15 /* ACContactListTableViewController.m */; };
+		86F8588A15DBEE5300A3BF15 /* ACContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586C15DBEE5200A3BF15 /* ACContactListTableViewController.m */; };
+		86F8588B15DBEE5300A3BF15 /* ACContactStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586E15DBEE5200A3BF15 /* ACContactStore.m */; };
+		86F8588C15DBEE5300A3BF15 /* ACContactStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586E15DBEE5200A3BF15 /* ACContactStore.m */; };
+		86F8588D15DBEE5300A3BF15 /* ACContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8587015DBEE5200A3BF15 /* ACContactTableViewController.m */; };
+		86F8588E15DBEE5300A3BF15 /* ACContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8587015DBEE5200A3BF15 /* ACContactTableViewController.m */; };
+		86F8589115DBEE5300A3BF15 /* ACWellcomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8587415DBEE5200A3BF15 /* ACWellcomeScreenViewController.m */; };
+		86F8589215DBEE5300A3BF15 /* ACWellcomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8587415DBEE5200A3BF15 /* ACWellcomeScreenViewController.m */; };
+		86F8589315DBEE5300A3BF15 /* CTCT_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86F8587515DBEE5200A3BF15 /* CTCT_pic.jpg */; };
+		86F8589415DBEE5300A3BF15 /* CTCT_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86F8587515DBEE5200A3BF15 /* CTCT_pic.jpg */; };
+		86F8589515DBEE5300A3BF15 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F8587615DBEE5300A3BF15 /* Default.png */; };
+		86F8589615DBEE5300A3BF15 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F8587615DBEE5300A3BF15 /* Default.png */; };
+		86F858A215DBF46700A3BF15 /* ACAddingContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F858A115DBF46700A3BF15 /* ACAddingContactTableViewController.m */; };
+		86F858A315DBF46700A3BF15 /* ACAddingContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F858A115DBF46700A3BF15 /* ACAddingContactTableViewController.m */; };
+		86F858B115DC048700A3BF15 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F858B015DC048700A3BF15 /* SystemConfiguration.framework */; };
+		86F858B515DC049500A3BF15 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F858B415DC049400A3BF15 /* Security.framework */; };
+		86F858B715DC049E00A3BF15 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F858B615DC049E00A3BF15 /* MobileCoreServices.framework */; };
+		86F858B915DC04A700A3BF15 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F858B815DC04A700A3BF15 /* CFNetwork.framework */; };
+		86F858BB15DC04AD00A3BF15 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F858BA15DC04AD00A3BF15 /* CoreData.framework */; };
+		86F858BD15DC04B200A3BF15 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F858BC15DC04B200A3BF15 /* QuartzCore.framework */; };
+		86F858BF15DC04BC00A3BF15 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F858BE15DC04BC00A3BF15 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		86D48D2F15DC05D30098A176 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D48D2415DC05D30098A176 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D1614564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		86D48D3115DC05D30098A176 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D48D2415DC05D30098A176 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D2614564E820060A5C5;
+			remoteInfo = RestKitTests;
+		};
+		86D48D3315DC05D30098A176 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D48D2415DC05D30098A176 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E62145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		86D48D3515DC05D30098A176 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D48D2415DC05D30098A176 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E78145651060060A5C5;
+			remoteInfo = RestKitFrameworkTests;
+		};
+		86D48D3715DC05D30098A176 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D48D2415DC05D30098A176 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 259C301615128079003066A2;
+			remoteInfo = RestKitResources;
+		};
 		86F8582915DBED7C00A3BF15 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 86F857FA15DBED7C00A3BF15 /* Project object */;
@@ -33,6 +118,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		86D48D2415DC05D30098A176 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		86F8580315DBED7C00A3BF15 /* JMML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F8580715DBED7C00A3BF15 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		86F8580915DBED7C00A3BF15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,6 +138,53 @@
 		86F8582F15DBED7C00A3BF15 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		86F8583115DBED7C00A3BF15 /* JMMLTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMMLTests.h; sourceTree = "<group>"; };
 		86F8583215DBED7C00A3BF15 /* JMMLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMMLTests.m; sourceTree = "<group>"; };
+		86F8583C15DBEE0C00A3BF15 /* ACConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACConstants.h; sourceTree = "<group>"; };
+		86F8583D15DBEE0C00A3BF15 /* appconnect-api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "appconnect-api.h"; path = "JMML/appconnect-api.h"; sourceTree = "<group>"; };
+		86F8583E15DBEE0C00A3BF15 /* appconnect-api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "appconnect-api.m"; path = "JMML/appconnect-api.m"; sourceTree = "<group>"; };
+		86F8583F15DBEE0C00A3BF15 /* enunciate-common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "enunciate-common.h"; path = "JMML/enunciate-common.h"; sourceTree = "<group>"; };
+		86F8584015DBEE0C00A3BF15 /* enunciate-common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "enunciate-common.m"; path = "JMML/enunciate-common.m"; sourceTree = "<group>"; };
+		86F8584615DBEE1700A3BF15 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
+		86F8584715DBEE1700A3BF15 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
+		86F8584815DBEE1700A3BF15 /* GTMOAuth2Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2Authentication.h; sourceTree = "<group>"; };
+		86F8584915DBEE1700A3BF15 /* GTMOAuth2Authentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2Authentication.m; sourceTree = "<group>"; };
+		86F8584A15DBEE1700A3BF15 /* GTMOAuth2SignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2SignIn.h; sourceTree = "<group>"; };
+		86F8584B15DBEE1700A3BF15 /* GTMOAuth2SignIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2SignIn.m; sourceTree = "<group>"; };
+		86F8584C15DBEE1700A3BF15 /* GTMOAuth2ViewControllerTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2ViewControllerTouch.h; sourceTree = "<group>"; };
+		86F8584D15DBEE1700A3BF15 /* GTMOAuth2ViewControllerTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2ViewControllerTouch.m; sourceTree = "<group>"; };
+		86F8584E15DBEE1700A3BF15 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
+		86F8585D15DBEE5200A3BF15 /* ACContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContact.h; path = "Google gtm-oauth2/ACContact.h"; sourceTree = "<group>"; };
+		86F8585E15DBEE5200A3BF15 /* ACContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContact.m; path = "Google gtm-oauth2/ACContact.m"; sourceTree = "<group>"; };
+		86F8585F15DBEE5200A3BF15 /* ACContactConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactConnection.h; path = "Google gtm-oauth2/ACContactConnection.h"; sourceTree = "<group>"; };
+		86F8586015DBEE5200A3BF15 /* ACContactConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactConnection.m; path = "Google gtm-oauth2/ACContactConnection.m"; sourceTree = "<group>"; };
+		86F8586115DBEE5200A3BF15 /* ACContactDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactDetailsController.h; path = "Google gtm-oauth2/ACContactDetailsController.h"; sourceTree = "<group>"; };
+		86F8586215DBEE5200A3BF15 /* ACContactDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactDetailsController.m; path = "Google gtm-oauth2/ACContactDetailsController.m"; sourceTree = "<group>"; };
+		86F8586315DBEE5200A3BF15 /* ACContactList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactList.h; path = "Google gtm-oauth2/ACContactList.h"; sourceTree = "<group>"; };
+		86F8586415DBEE5200A3BF15 /* ACContactList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactList.m; path = "Google gtm-oauth2/ACContactList.m"; sourceTree = "<group>"; };
+		86F8586515DBEE5200A3BF15 /* ACContactListConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactListConnection.h; path = "Google gtm-oauth2/ACContactListConnection.h"; sourceTree = "<group>"; };
+		86F8586615DBEE5200A3BF15 /* ACContactListConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactListConnection.m; path = "Google gtm-oauth2/ACContactListConnection.m"; sourceTree = "<group>"; };
+		86F8586715DBEE5200A3BF15 /* ACContactListPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactListPickerViewController.h; path = "Google gtm-oauth2/ACContactListPickerViewController.h"; sourceTree = "<group>"; };
+		86F8586815DBEE5200A3BF15 /* ACContactListPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactListPickerViewController.m; path = "Google gtm-oauth2/ACContactListPickerViewController.m"; sourceTree = "<group>"; };
+		86F8586915DBEE5200A3BF15 /* ACContactListStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactListStore.h; path = "Google gtm-oauth2/ACContactListStore.h"; sourceTree = "<group>"; };
+		86F8586A15DBEE5200A3BF15 /* ACContactListStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactListStore.m; path = "Google gtm-oauth2/ACContactListStore.m"; sourceTree = "<group>"; };
+		86F8586B15DBEE5200A3BF15 /* ACContactListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactListTableViewController.h; path = "Google gtm-oauth2/ACContactListTableViewController.h"; sourceTree = "<group>"; };
+		86F8586C15DBEE5200A3BF15 /* ACContactListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactListTableViewController.m; path = "Google gtm-oauth2/ACContactListTableViewController.m"; sourceTree = "<group>"; };
+		86F8586D15DBEE5200A3BF15 /* ACContactStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactStore.h; path = "Google gtm-oauth2/ACContactStore.h"; sourceTree = "<group>"; };
+		86F8586E15DBEE5200A3BF15 /* ACContactStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactStore.m; path = "Google gtm-oauth2/ACContactStore.m"; sourceTree = "<group>"; };
+		86F8586F15DBEE5200A3BF15 /* ACContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactTableViewController.h; path = "Google gtm-oauth2/ACContactTableViewController.h"; sourceTree = "<group>"; };
+		86F8587015DBEE5200A3BF15 /* ACContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactTableViewController.m; path = "Google gtm-oauth2/ACContactTableViewController.m"; sourceTree = "<group>"; };
+		86F8587315DBEE5200A3BF15 /* ACWellcomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACWellcomeScreenViewController.h; path = "Google gtm-oauth2/ACWellcomeScreenViewController.h"; sourceTree = "<group>"; };
+		86F8587415DBEE5200A3BF15 /* ACWellcomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACWellcomeScreenViewController.m; path = "Google gtm-oauth2/ACWellcomeScreenViewController.m"; sourceTree = "<group>"; };
+		86F8587515DBEE5200A3BF15 /* CTCT_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = CTCT_pic.jpg; path = "Google gtm-oauth2/CTCT_pic.jpg"; sourceTree = "<group>"; };
+		86F8587615DBEE5300A3BF15 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "Google gtm-oauth2/Default.png"; sourceTree = "<group>"; };
+		86F858A015DBF46700A3BF15 /* ACAddingContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAddingContactTableViewController.h; sourceTree = "<group>"; };
+		86F858A115DBF46700A3BF15 /* ACAddingContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAddingContactTableViewController.m; sourceTree = "<group>"; };
+		86F858B015DC048700A3BF15 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		86F858B415DC049400A3BF15 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		86F858B615DC049E00A3BF15 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		86F858B815DC04A700A3BF15 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		86F858BA15DC04AD00A3BF15 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		86F858BC15DC04B200A3BF15 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		86F858BE15DC04BC00A3BF15 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +192,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86D48D4915DC06C00098A176 /* libRestKit.a in Frameworks */,
+				86F858BF15DC04BC00A3BF15 /* libxml2.dylib in Frameworks */,
+				86F858BD15DC04B200A3BF15 /* QuartzCore.framework in Frameworks */,
+				86F858BB15DC04AD00A3BF15 /* CoreData.framework in Frameworks */,
+				86F858B915DC04A700A3BF15 /* CFNetwork.framework in Frameworks */,
+				86F858B715DC049E00A3BF15 /* MobileCoreServices.framework in Frameworks */,
+				86F858B515DC049500A3BF15 /* Security.framework in Frameworks */,
+				86F858B115DC048700A3BF15 /* SystemConfiguration.framework in Frameworks */,
 				86F8580815DBED7C00A3BF15 /* UIKit.framework in Frameworks */,
 				86F8580A15DBED7C00A3BF15 /* Foundation.framework in Frameworks */,
 				86F8580C15DBED7C00A3BF15 /* CoreGraphics.framework in Frameworks */,
@@ -78,9 +219,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86D48D2515DC05D30098A176 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86D48D3015DC05D30098A176 /* libRestKit.a */,
+				86D48D3215DC05D30098A176 /* RestKitTests.octest */,
+				86D48D3415DC05D30098A176 /* RestKit.framework */,
+				86D48D3615DC05D30098A176 /* RestKitFrameworkTests.octest */,
+				86D48D3815DC05D30098A176 /* RestKitResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		86F857F815DBED7C00A3BF15 = {
 			isa = PBXGroup;
 			children = (
+				86D48D2415DC05D30098A176 /* RestKit.xcodeproj */,
+				86F8589D15DBEFC900A3BF15 /* Appconnect */,
+				86F8584515DBEE1700A3BF15 /* Google gtm-oauth2 */,
 				86F8580D15DBED7C00A3BF15 /* JMML */,
 				86F8582B15DBED7C00A3BF15 /* JMMLTests */,
 				86F8580615DBED7C00A3BF15 /* Frameworks */,
@@ -100,6 +256,13 @@
 		86F8580615DBED7C00A3BF15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				86F858BE15DC04BC00A3BF15 /* libxml2.dylib */,
+				86F858BC15DC04B200A3BF15 /* QuartzCore.framework */,
+				86F858BA15DC04AD00A3BF15 /* CoreData.framework */,
+				86F858B815DC04A700A3BF15 /* CFNetwork.framework */,
+				86F858B615DC049E00A3BF15 /* MobileCoreServices.framework */,
+				86F858B415DC049400A3BF15 /* Security.framework */,
+				86F858B015DC048700A3BF15 /* SystemConfiguration.framework */,
 				86F8580715DBED7C00A3BF15 /* UIKit.framework */,
 				86F8580915DBED7C00A3BF15 /* Foundation.framework */,
 				86F8580B15DBED7C00A3BF15 /* CoreGraphics.framework */,
@@ -111,11 +274,12 @@
 		86F8580D15DBED7C00A3BF15 /* JMML */ = {
 			isa = PBXGroup;
 			children = (
-				86F8581615DBED7C00A3BF15 /* ACAppDelegate.h */,
-				86F8581715DBED7C00A3BF15 /* ACAppDelegate.m */,
-				86F8581915DBED7C00A3BF15 /* MainStoryboard.storyboard */,
-				86F8581C15DBED7C00A3BF15 /* ACViewController.h */,
-				86F8581D15DBED7C00A3BF15 /* ACViewController.m */,
+				86F8589E15DBEFF400A3BF15 /* ROOT */,
+				86F8589C15DBEFA700A3BF15 /* Contact List Table */,
+				86F8589B15DBEF9400A3BF15 /* Contact Table */,
+				86F8589915DBEF3C00A3BF15 /* Adding Contact VC */,
+				86F8589815DBEF1C00A3BF15 /* Stores */,
+				86F8589715DBEF0B00A3BF15 /* Models */,
 				86F8580E15DBED7C00A3BF15 /* Supporting Files */,
 			);
 			path = JMML;
@@ -149,6 +313,124 @@
 				86F8582E15DBED7C00A3BF15 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86F8584515DBEE1700A3BF15 /* Google gtm-oauth2 */ = {
+			isa = PBXGroup;
+			children = (
+				86F8584615DBEE1700A3BF15 /* GTMHTTPFetcher.h */,
+				86F8584715DBEE1700A3BF15 /* GTMHTTPFetcher.m */,
+				86F8584815DBEE1700A3BF15 /* GTMOAuth2Authentication.h */,
+				86F8584915DBEE1700A3BF15 /* GTMOAuth2Authentication.m */,
+				86F8584A15DBEE1700A3BF15 /* GTMOAuth2SignIn.h */,
+				86F8584B15DBEE1700A3BF15 /* GTMOAuth2SignIn.m */,
+				86F8584C15DBEE1700A3BF15 /* GTMOAuth2ViewControllerTouch.h */,
+				86F8584D15DBEE1700A3BF15 /* GTMOAuth2ViewControllerTouch.m */,
+				86F8584E15DBEE1700A3BF15 /* GTMOAuth2ViewTouch.xib */,
+			);
+			name = "Google gtm-oauth2";
+			path = "JMML/Google gtm-oauth2";
+			sourceTree = "<group>";
+		};
+		86F8589715DBEF0B00A3BF15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				86F8585D15DBEE5200A3BF15 /* ACContact.h */,
+				86F8585E15DBEE5200A3BF15 /* ACContact.m */,
+				86F8586315DBEE5200A3BF15 /* ACContactList.h */,
+				86F8586415DBEE5200A3BF15 /* ACContactList.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		86F8589815DBEF1C00A3BF15 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				86F8589A15DBEF5E00A3BF15 /* Store Connections */,
+				86F8586915DBEE5200A3BF15 /* ACContactListStore.h */,
+				86F8586A15DBEE5200A3BF15 /* ACContactListStore.m */,
+				86F8586D15DBEE5200A3BF15 /* ACContactStore.h */,
+				86F8586E15DBEE5200A3BF15 /* ACContactStore.m */,
+			);
+			name = Stores;
+			sourceTree = "<group>";
+		};
+		86F8589915DBEF3C00A3BF15 /* Adding Contact VC */ = {
+			isa = PBXGroup;
+			children = (
+				86F8586715DBEE5200A3BF15 /* ACContactListPickerViewController.h */,
+				86F8586815DBEE5200A3BF15 /* ACContactListPickerViewController.m */,
+				86F858A015DBF46700A3BF15 /* ACAddingContactTableViewController.h */,
+				86F858A115DBF46700A3BF15 /* ACAddingContactTableViewController.m */,
+			);
+			name = "Adding Contact VC";
+			sourceTree = "<group>";
+		};
+		86F8589A15DBEF5E00A3BF15 /* Store Connections */ = {
+			isa = PBXGroup;
+			children = (
+				86F8585F15DBEE5200A3BF15 /* ACContactConnection.h */,
+				86F8586015DBEE5200A3BF15 /* ACContactConnection.m */,
+				86F8586515DBEE5200A3BF15 /* ACContactListConnection.h */,
+				86F8586615DBEE5200A3BF15 /* ACContactListConnection.m */,
+			);
+			name = "Store Connections";
+			sourceTree = "<group>";
+		};
+		86F8589B15DBEF9400A3BF15 /* Contact Table */ = {
+			isa = PBXGroup;
+			children = (
+				86F8586115DBEE5200A3BF15 /* ACContactDetailsController.h */,
+				86F8586215DBEE5200A3BF15 /* ACContactDetailsController.m */,
+				86F8586F15DBEE5200A3BF15 /* ACContactTableViewController.h */,
+				86F8587015DBEE5200A3BF15 /* ACContactTableViewController.m */,
+			);
+			name = "Contact Table";
+			sourceTree = "<group>";
+		};
+		86F8589C15DBEFA700A3BF15 /* Contact List Table */ = {
+			isa = PBXGroup;
+			children = (
+				86F8586B15DBEE5200A3BF15 /* ACContactListTableViewController.h */,
+				86F8586C15DBEE5200A3BF15 /* ACContactListTableViewController.m */,
+			);
+			name = "Contact List Table";
+			sourceTree = "<group>";
+		};
+		86F8589D15DBEFC900A3BF15 /* Appconnect */ = {
+			isa = PBXGroup;
+			children = (
+				86F8583D15DBEE0C00A3BF15 /* appconnect-api.h */,
+				86F8583E15DBEE0C00A3BF15 /* appconnect-api.m */,
+				86F8583F15DBEE0C00A3BF15 /* enunciate-common.h */,
+				86F8584015DBEE0C00A3BF15 /* enunciate-common.m */,
+			);
+			name = Appconnect;
+			sourceTree = "<group>";
+		};
+		86F8589E15DBEFF400A3BF15 /* ROOT */ = {
+			isa = PBXGroup;
+			children = (
+				86F8589F15DBF00C00A3BF15 /* Resources */,
+				86F8587315DBEE5200A3BF15 /* ACWellcomeScreenViewController.h */,
+				86F8587415DBEE5200A3BF15 /* ACWellcomeScreenViewController.m */,
+				86F8581615DBED7C00A3BF15 /* ACAppDelegate.h */,
+				86F8581715DBED7C00A3BF15 /* ACAppDelegate.m */,
+				86F8581915DBED7C00A3BF15 /* MainStoryboard.storyboard */,
+				86F8581C15DBED7C00A3BF15 /* ACViewController.h */,
+				86F8581D15DBED7C00A3BF15 /* ACViewController.m */,
+			);
+			name = ROOT;
+			sourceTree = "<group>";
+		};
+		86F8589F15DBF00C00A3BF15 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				86F8587515DBEE5200A3BF15 /* CTCT_pic.jpg */,
+				86F8587615DBEE5300A3BF15 /* Default.png */,
+				86F8583C15DBEE0C00A3BF15 /* ACConstants.h */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +492,12 @@
 			mainGroup = 86F857F815DBED7C00A3BF15;
 			productRefGroup = 86F8580415DBED7C00A3BF15 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 86D48D2515DC05D30098A176 /* Products */;
+					ProjectRef = 86D48D2415DC05D30098A176 /* RestKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				86F8580215DBED7C00A3BF15 /* JMML */,
@@ -218,6 +506,44 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		86D48D3015DC05D30098A176 /* libRestKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKit.a;
+			remoteRef = 86D48D2F15DC05D30098A176 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		86D48D3215DC05D30098A176 /* RestKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitTests.octest;
+			remoteRef = 86D48D3115DC05D30098A176 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		86D48D3415DC05D30098A176 /* RestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RestKit.framework;
+			remoteRef = 86D48D3315DC05D30098A176 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		86D48D3615DC05D30098A176 /* RestKitFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitFrameworkTests.octest;
+			remoteRef = 86D48D3515DC05D30098A176 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		86D48D3815DC05D30098A176 /* RestKitResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitResources.bundle;
+			remoteRef = 86D48D3715DC05D30098A176 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		86F8580115DBED7C00A3BF15 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -225,6 +551,9 @@
 			files = (
 				86F8581215DBED7C00A3BF15 /* InfoPlist.strings in Resources */,
 				86F8581B15DBED7C00A3BF15 /* MainStoryboard.storyboard in Resources */,
+				86F8585715DBEE1700A3BF15 /* GTMOAuth2ViewTouch.xib in Resources */,
+				86F8589315DBEE5300A3BF15 /* CTCT_pic.jpg in Resources */,
+				86F8589515DBEE5300A3BF15 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +562,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				86F8583015DBED7C00A3BF15 /* InfoPlist.strings in Resources */,
+				86F8585815DBEE1700A3BF15 /* GTMOAuth2ViewTouch.xib in Resources */,
+				86F8589415DBEE5300A3BF15 /* CTCT_pic.jpg in Resources */,
+				86F8589615DBEE5300A3BF15 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +594,24 @@
 				86F8581415DBED7C00A3BF15 /* main.m in Sources */,
 				86F8581815DBED7C00A3BF15 /* ACAppDelegate.m in Sources */,
 				86F8581E15DBED7C00A3BF15 /* ACViewController.m in Sources */,
+				86F8584115DBEE0C00A3BF15 /* appconnect-api.m in Sources */,
+				86F8584315DBEE0C00A3BF15 /* enunciate-common.m in Sources */,
+				86F8584F15DBEE1700A3BF15 /* GTMHTTPFetcher.m in Sources */,
+				86F8585115DBEE1700A3BF15 /* GTMOAuth2Authentication.m in Sources */,
+				86F8585315DBEE1700A3BF15 /* GTMOAuth2SignIn.m in Sources */,
+				86F8585515DBEE1700A3BF15 /* GTMOAuth2ViewControllerTouch.m in Sources */,
+				86F8587B15DBEE5300A3BF15 /* ACContact.m in Sources */,
+				86F8587D15DBEE5300A3BF15 /* ACContactConnection.m in Sources */,
+				86F8587F15DBEE5300A3BF15 /* ACContactDetailsController.m in Sources */,
+				86F8588115DBEE5300A3BF15 /* ACContactList.m in Sources */,
+				86F8588315DBEE5300A3BF15 /* ACContactListConnection.m in Sources */,
+				86F8588515DBEE5300A3BF15 /* ACContactListPickerViewController.m in Sources */,
+				86F8588715DBEE5300A3BF15 /* ACContactListStore.m in Sources */,
+				86F8588915DBEE5300A3BF15 /* ACContactListTableViewController.m in Sources */,
+				86F8588B15DBEE5300A3BF15 /* ACContactStore.m in Sources */,
+				86F8588D15DBEE5300A3BF15 /* ACContactTableViewController.m in Sources */,
+				86F8589115DBEE5300A3BF15 /* ACWellcomeScreenViewController.m in Sources */,
+				86F858A215DBF46700A3BF15 /* ACAddingContactTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +620,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				86F8583315DBED7C00A3BF15 /* JMMLTests.m in Sources */,
+				86F8584215DBEE0C00A3BF15 /* appconnect-api.m in Sources */,
+				86F8584415DBEE0C00A3BF15 /* enunciate-common.m in Sources */,
+				86F8585015DBEE1700A3BF15 /* GTMHTTPFetcher.m in Sources */,
+				86F8585215DBEE1700A3BF15 /* GTMOAuth2Authentication.m in Sources */,
+				86F8585415DBEE1700A3BF15 /* GTMOAuth2SignIn.m in Sources */,
+				86F8585615DBEE1700A3BF15 /* GTMOAuth2ViewControllerTouch.m in Sources */,
+				86F8587C15DBEE5300A3BF15 /* ACContact.m in Sources */,
+				86F8587E15DBEE5300A3BF15 /* ACContactConnection.m in Sources */,
+				86F8588015DBEE5300A3BF15 /* ACContactDetailsController.m in Sources */,
+				86F8588215DBEE5300A3BF15 /* ACContactList.m in Sources */,
+				86F8588415DBEE5300A3BF15 /* ACContactListConnection.m in Sources */,
+				86F8588615DBEE5300A3BF15 /* ACContactListPickerViewController.m in Sources */,
+				86F8588815DBEE5300A3BF15 /* ACContactListStore.m in Sources */,
+				86F8588A15DBEE5300A3BF15 /* ACContactListTableViewController.m in Sources */,
+				86F8588C15DBEE5300A3BF15 /* ACContactStore.m in Sources */,
+				86F8588E15DBEE5300A3BF15 /* ACContactTableViewController.m in Sources */,
+				86F8589215DBEE5300A3BF15 /* ACWellcomeScreenViewController.m in Sources */,
+				86F858A315DBF46700A3BF15 /* ACAddingContactTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +733,15 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JMML/JMML-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"/usr/include/libxml2/**",
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"/**",
+				);
 				INFOPLIST_FILE = "JMML/JMML-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -376,7 +752,15 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JMML/JMML-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"/usr/include/libxml2/**",
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"/**",
+				);
 				INFOPLIST_FILE = "JMML/JMML-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -435,6 +819,7 @@
 				86F8583815DBED7C00A3BF15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86F8583915DBED7C00A3BF15 /* Build configuration list for PBXNativeTarget "JMMLTests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +828,7 @@
 				86F8583B15DBED7C00A3BF15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

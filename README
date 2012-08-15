@@ -1,0 +1,15 @@
+Requirement: XCode 4.2 up
+
+This project is IOS 5 compatible.
+
+This project uses Restkit as a sub-module
+
+There are two ways you can fork this project:
+
+1. Clone recursively
+
+git clone repository_URL --recursive
+
+2. Download the project then download the submodule, as dicussed in this link
+
+http://stackoverflow.com/questions/6474847/how-do-i-git-clone-recursive-and-checkout-master-on-all-submodules-in-a-single
