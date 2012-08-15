@@ -62,7 +62,7 @@
     }
     
     ACContactList *list = [[self.shared_contact_list_store allLists] objectAtIndex:[indexPath row]] ;
-    [[cell textLabel] setText:[NSString stringWithFormat:@"%@ \t\t%d contacts", list.name, list.contactCount]];
+    [[cell textLabel] setText:[NSString stringWithFormat:@"%@", list.name]];
     
     return cell;
 }
