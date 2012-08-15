@@ -13,12 +13,11 @@
 @interface ACAddingContactViewController()
 
 @property (strong,nonatomic)ACContactStore *shared_store ;
-@property (strong, nonatomic) ACContactList *choosen_list ;
 @end
 
 
 @implementation ACAddingContactViewController
-@synthesize choosenList = _choosenList;
+@synthesize choosenListLable = _choosenListLable;
 @synthesize first_name = _first_name;
 @synthesize last_name = _last_name;
 @synthesize email = _email;
@@ -30,10 +29,16 @@
     [super viewDidLoad];
     
     self.shared_store = [ACContactStore sharedStore] ;
+    NSArray *allLists = [[ACContactListStore sharedContactListStore] allLists] ;
     
-    // Default value
-    self.choosen_list = [[[ACContactListStore sharedContactListStore] allLists] objectAtIndex:0] ;
-    self.choosenList.text = self.choosen_list.name ;
+    if ( [allLists count] != 0 ){
+
+        // Default value
+        if (!self.choosen_list) {
+            self.choosen_list = [[[ACContactListStore sharedContactListStore] allLists] objectAtIndex:0] ;
+        }
+        self.choosenListLable.text = self.choosen_list.name ;
+    }
     
 }
 
@@ -64,7 +69,7 @@
 
 - (void)viewDidUnload {
     [self setChoosen_list:nil] ;
-    [self setChoosenList:nil];
+    [self setChoosenListLable:nil];
     [self setFirst_name:nil];
     [self setLast_name:nil];
     [self setEmail:nil];
@@ -88,7 +93,7 @@
 - (void)listPickerViewController:(ACContactListPickerViewController *)controller didSelectList:(ACContactList *)list{
     NSLog(@"listPicker's delegate get called") ;
     self.choosen_list = list ;
-	self.choosenList.text = list.name ;
+	self.choosenListLable.text = list.name ;
 	[self.navigationController popViewControllerAnimated:YES];
 }
 

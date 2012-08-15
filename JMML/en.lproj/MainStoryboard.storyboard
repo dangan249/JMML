@@ -50,7 +50,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gc5-I7-6nP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="7i4-uO-e9x" customClass="ACWellcomeScreenViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Aj-rl-rWY">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Default.png" id="jmE-rf-ZgK">
@@ -97,7 +97,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1300" y="-124"/>
+            <point key="canvasLocation" x="-1320" y="-130"/>
         </scene>
         <!--Adding Contact View Controller-->
         <scene sceneID="OiJ-xg-11j">
@@ -105,7 +105,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qlr-l4-slr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="dl0-oJ-9VJ" customClass="ACAddingContactViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Caq-q6-1xN">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -223,7 +223,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="3wv-Dt-T3k"/>
                     <connections>
-                        <outlet property="choosenList" destination="H6R-Z0-goF" id="Kfr-qn-R3D"/>
+                        <outlet property="choosenListLable" destination="H6R-Z0-goF" id="TyR-fm-xeo"/>
                         <outlet property="email" destination="lBt-5m-SSa" id="6XG-du-gTA"/>
                         <outlet property="first_name" destination="Ajv-tA-6Jq" id="MaP-uV-Car"/>
                         <outlet property="last_name" destination="BKv-x2-q9v" id="kRp-MV-emR"/>
@@ -244,6 +244,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Egf-li-JHN">
+                        <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="2" kind="relationship" relationship="rootViewController" id="fxc-0R-u9A"/>
                     </connections>
@@ -257,11 +261,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qF-s3-Vgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="FSi-RA-leH" customClass="ACContactListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Un4-CO-I9e">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="597-mY-Gsu">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactList" id="597-mY-Gsu">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -290,11 +294,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thI-tx-txr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Tga-kK-tvv" customClass="ACContactTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="E8Y-FJ-TQp">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="XBc-og-kIR">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Contact" id="XBc-og-kIR">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -309,7 +313,13 @@
                             <outlet property="delegate" destination="Tga-kK-tvv" id="yYq-7F-5Bw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="jYc-Ja-8R2"/>
+                    <navigationItem key="navigationItem" id="jYc-Ja-8R2">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="Awj-kK-iSj">
+                            <connections>
+                                <segue destination="dl0-oJ-9VJ" kind="push" identifier="addContact" id="mVj-Zn-Cfx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="chm-7L-J4d" kind="push" identifier="viewContactDetails" id="MFN-VB-CBE"/>
                     </connections>
@@ -338,7 +348,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJu-r5-yft" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ePi-zH-xui" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wFh-ln-exg">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -353,7 +363,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73o-ka-Tnd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="KwX-E8-X4J" customClass="ACContactListPickerViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JKV-at-YNz">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -406,7 +416,7 @@
         <class className="ACAddingContactViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ACAddingContactViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="choosenList" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="choosenListLable" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="email" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="first_name" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="last_name" candidateClass="UITextField"/>
@@ -435,5 +445,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="8tO-SY-v4W"/>
+        <segue reference="mVj-Zn-Cfx"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -32,11 +32,9 @@ static NSMutableArray *sharedContactConnectionList = nil;
         self.manager =[[ RKObjectManager sharedManager] initWithBaseURL:
                        [RKURL URLWithBaseURLString:@"http://api.constantcontact.com/v2/"]] ;
         
-        
         [[self.manager client] setValue:[((ACAppDelegate *) [[UIApplication sharedApplication] delegate] ) access_token] forHTTPHeaderField:@"authorization"] ;
         [[self.manager client] setValue:@"true" forHTTPHeaderField:@"SSLClientCipher"] ;
         [[self.manager client] setValue:@"application/json" forHTTPHeaderField:@"accept"] ;
-        
         // SET UP Mapping
         RKObjectMapping * addressMap = [RKObjectMapping mappingForClass:[APPCONNECT_APICONTACTSAddress class]] ;
         [addressMap mapKeyPath:@"line1" toAttribute:@"line1"] ;
@@ -91,7 +89,9 @@ static NSMutableArray *sharedContactConnectionList = nil;
 }
 
 - (void) getContacts{
-    [self.manager loadObjectsAtResourcePath:@"/contacts" delegate:self] ;
+    // need limit to be large enough that all contacts of SO be downloaded
+    // otherwise we will miss some contacts in a specific list
+    [self.manager loadObjectsAtResourcePath:@"/contacts?limit=50" delegate:self] ;
 }
 
 
@@ -171,7 +171,7 @@ static NSMutableArray *sharedContactConnectionList = nil;
                             ],\
                             \"action_by\":\"ACTION_BY_VISITOR\"\
                             }" , ((ACContactList *)[newContact.lists objectAtIndex:0]).identifier  ,[newContact.emailAddresses objectAtIndex:0], newContact.firstName, newContact.lastName ];
-    NSURL *url = [NSURL URLWithString:@"http://api.constantcontact.com/v2/contacts"] ;
+    NSURL *url = [NSURL URLWithString:@"http://api.constantcontact.com/v2/contacts?limit=50"] ;
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url] ;
     NSLog(@"JSON payload: \n\n%@\n\n", postString ) ;

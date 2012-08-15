@@ -52,6 +52,7 @@
     // get an instance of the shared_contact_store
     self.shared_contact_store = [ACContactStore sharedStore] ;
     self.allContactInChoosenList = [[self.shared_contact_store allContacts] filteredArrayUsingPredicate:condition];
+    NSLog(@"number of contacts in Choosen List: %d", [self.allContactInChoosenList count]) ;
     
 }
 
@@ -99,6 +100,8 @@
     if( [segue.identifier isEqualToString:@"viewConctacDetails"]){
         [segue.destinationViewController setAContact:self.choosenContact ] ;
     }
-
+    else if ( [segue.identifier isEqualToString:@"addContact"]){
+        [segue.destinationViewController setChoosen_list:self.choosenList] ;
+    }
 }
 @end
