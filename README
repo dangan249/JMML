@@ -12,4 +12,5 @@ git clone repository_URL --recursive
 
 2. Download the project then download the submodule, as dicussed in this link
 
-http://stackoverflow.com/questions/6474847/how-do-i-git-clone-recursive-and-checkout-master-on-all-submodules-in-a-single
+http://git-scm.com/book/en/Git-Tools-Submodules
+
