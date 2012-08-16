@@ -9,6 +9,9 @@
 #import "ACContactListPickerViewController.h"
 #import "ACContactListStore.h"
 
+// This controller will display a list of ContactList for users to choose
+// and will bring the user back to ACAddingContactViewController when finish
+
 @interface ACContactListPickerViewController()
 @property (strong,nonatomic)ACContactListStore *shared_contact_list_store ;
 @property ACContactList * selectedList ;
@@ -26,6 +29,12 @@
     [super viewDidLoad];
     self.shared_contact_list_store = [ACContactListStore sharedContactListStore] ;
 
+}
+
+-(void)viewDidUnload{
+    [super viewDidUnload] ;
+    self.delegate = nil ;
+    self.shared_contact_list_store = nil ;
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -58,7 +67,7 @@
     }
     
     ACContactList *list = [[self.shared_contact_list_store allLists] objectAtIndex:[indexPath row]] ;
-    [[cell textLabel] setText:[NSString stringWithFormat:@"%@ \t\t%d contacts", list.name, list.contactCount]];
+    [[cell textLabel] setText:[NSString stringWithFormat:@"%@", list.name]];
     
     return cell;
 }
@@ -70,7 +79,8 @@
 {
     [[self navigationController] setNavigationBarHidden:NO] ;
     self.selectedList = [[self.shared_contact_list_store allLists] objectAtIndex:[indexPath row]] ;
-
+    
+    // send message to its delegate to inform that a list has been chosen
     [self.delegate listPickerViewController:self didSelectList:self.selectedList] ;
     
 }

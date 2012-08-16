@@ -50,6 +50,9 @@ static NSMutableArray *sharedContactConnectionList = nil;
         [contactListMap mapKeyPath:@"id" toAttribute:@"identifier"] ;
         [contactListMap mapKeyPath:@"contact_count" toAttribute:@"contactCount"] ;
         
+        //RKObjectMapping *emailMap = [RKObjectMapping mappingForClass:[APPCONNECT_APICONTACTSEmailAddress class]] ;
+        //[emailMap mapKeyPath:@"email_address" toAttribute:@"email"] ;
+        //[emailMap mapKeyPath:@"email_addresses" toAttribute:@"emailAddresses"] ;
         
         self.contactMap = [RKObjectMapping mappingForClass:[ACContact class]] ;
         //RKObjectMapping * contactMap = [RKObjectMapping mappingForClass:[NSMutableArray class]] ;
@@ -64,6 +67,7 @@ static NSMutableArray *sharedContactConnectionList = nil;
         
         [self.contactMap mapRelationship:@"addresses" withMapping:addressMap] ;
         [self.contactMap mapRelationship:@"lists" withMapping:contactListMap] ;
+        //[self.contactMap mapRelationship:@"email_addresses" withMapping:emailMap] ;
         
         [self.manager.mappingProvider setObjectMapping:self.contactMap forResourcePathPattern:@"/contacts"] ;
         //[self.manager.mappingProvider registerMapping:self.contactMap withRootKeyPath:@"/contacts"] ;

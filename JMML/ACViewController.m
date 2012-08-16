@@ -50,7 +50,10 @@
     
 }
 
-
+- (void)viewDidUnload{
+    [super viewDidUnload] ;
+    self.shared_oauth = nil ;
+}
 -(void)viewWillAppear:(BOOL)animated{
     [[self navigationController] setNavigationBarHidden:YES] ;
 }
@@ -90,7 +93,7 @@
         
         NSLog(@"Authorizatioin succeeded.  Access token: \n\n %@", [((ACAppDelegate *) [[UIApplication sharedApplication] delegate] ) access_token]) ;
         
-        // segue to ACContactTableViewController
+        // segue to ACContactListTableViewController
         [self performSegueWithIdentifier:@"logInSucceeded" sender:self] ;
     }
 }

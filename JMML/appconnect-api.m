@@ -21425,6 +21425,7 @@
  */
 @implementation APPCONNECT_APICONTACTSEmailAddress
 
+@synthesize email = _email ;
 /**
  * Contact's status, must be one of {"ACTIVE", "UNCONFIRMED", "OPTOUT", "REMOVED", "NON_SUBSCRIBER", "VISITOR"}
  */
@@ -21537,13 +21538,7 @@
   _optOutDate = newOptOutDate;
 }
 
-/**
- * The email address associated with the contact. Max length 80
- */
-- (NSString *) email
-{
-  return _email;
-}
+
 
 /**
  * The email address associated with the contact. Max length 80

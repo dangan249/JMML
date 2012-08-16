@@ -12,6 +12,6 @@
 
 @synthesize window = _window ;
 @synthesize access_token = _access_token ;
-
+@synthesize contactToDisplay = _contactToDisplay ;
 
 @end

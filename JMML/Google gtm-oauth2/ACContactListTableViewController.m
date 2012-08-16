@@ -14,7 +14,6 @@
 @interface ACContactListTableViewController ()
 
 @property (strong,nonatomic)ACContactListStore *shared_contact_list_store ;
-@property (strong, nonatomic) ACContactStore *shared_contact_store ;
 @property ACContactList * selectedList ;
 
 @end
@@ -27,18 +26,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.shared_contact_store = [ACContactStore sharedStore] ;
-    [self.shared_contact_store getContacts] ;
-     self.shared_contact_list_store = [ACContactListStore sharedContactListStore] ;
+    
+    // load the list of all contacts here so when the user choose a contact list
+    // the filering process does not need to wait for the GET /contacts call
+    [[ACContactStore sharedStore] getContacts] ;
+
+    self.shared_contact_list_store = [ACContactListStore sharedContactListStore] ;
+
 }
 
+-(void)viewDidUnload{
+    [super viewDidUnload] ;
+    self.shared_contact_list_store = nil ;
+    self.selectedList = nil ;
+}
 -(void) viewWillAppear:(BOOL)animated{
     [[self navigationController] setNavigationBarHidden:NO] ;
 }
-
-//- (id) initWithStyle:(UITableViewStyle)style{
-//    return [self init] ;
-//}
 
 // If you don't understand these data source + delegate's methods
 // Please do some research about how to set up UITableViewController
@@ -68,16 +72,15 @@
 }
 
 
-
-
          
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [[self navigationController] setNavigationBarHidden:NO] ;
+    
+    // user choose a list and we fire the segue to ACContactTableController
     self.selectedList = [[self.shared_contact_list_store allLists] objectAtIndex:[indexPath row]] ;
-        
     [self performSegueWithIdentifier:@"viewContacts" sender:self] ;
 }
 

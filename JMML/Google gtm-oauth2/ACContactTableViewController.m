@@ -8,7 +8,6 @@
 
 #import "ACContactTableViewController.h"
 #import "ACContactStore.h"
-#import "ACContactDetailsController.h"
 #import "ACAppDelegate.h"
 #import "ACAddingContactTableViewController.h"
 #import "ACContactList.h"
@@ -25,6 +24,7 @@
 @synthesize shared_contact_store = _shared_contact_store ;
 @synthesize allContactInChoosenList = _allContactInChoosenList ;
 @synthesize choosenList = _choosenList ;
+@synthesize choosenContact = _choosenContact ;
 
 // viewDidLoad contains codes that pick (filter) all Contacts in a specific ContactList
 -(void) viewDidLoad{
@@ -52,10 +52,16 @@
     // get an instance of the shared_contact_store
     self.shared_contact_store = [ACContactStore sharedStore] ;
     self.allContactInChoosenList = [[self.shared_contact_store allContacts] filteredArrayUsingPredicate:condition];
-    NSLog(@"number of contacts in Choosen List: %d", [self.allContactInChoosenList count]) ;
     
 }
 
+-(void)viewDidUnload{
+    [super viewDidUnload] ;
+    self.shared_contact_store = nil ;
+    self.allContactInChoosenList = nil ;
+    self.choosenContact = nil ;
+    self.choosenList = nil ;
+}
 -(void) viewWillAppear:(BOOL)animated{
     [[self navigationController] setNavigationBarHidden:NO] ;
 }
@@ -91,16 +97,26 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [[self navigationController] setNavigationBarHidden:NO] ;
+    
+    // segue to ACContactDetailsController
     self.choosenContact = [self.allContactInChoosenList objectAtIndex:[indexPath row]] ;
+    NSLog(@"Choosen Contact: %@ %@", self.choosenContact.firstName, self.choosenContact.lastName) ;
     [self performSegueWithIdentifier:@"viewContactDetails" sender:self] ;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    if( [segue.identifier isEqualToString:@"viewConctacDetails"]){
-        [segue.destinationViewController setAContact:self.choosenContact ] ;
+    if( [segue.identifier isEqualToString:@"viewContactDetails"]){
+
+        [((ACAppDelegate *) [[UIApplication sharedApplication] delegate] ) setContactToDisplay:self.choosenContact] ;
+        
+        
     }
     else if ( [segue.identifier isEqualToString:@"addContact"]){
+
+        // if user click on the plus sign
+        // they will trigger the segue to JMML main feature
+        // we will set the choosen list for users too
         [segue.destinationViewController setChoosen_list:self.choosenList] ;
     }
 }

@@ -41,6 +41,14 @@
     }
     
 }
+- (void)viewDidUnload {
+    [self setChoosen_list:nil] ;
+    [self setChoosenListLable:nil];
+    [self setFirst_name:nil];
+    [self setLast_name:nil];
+    [self setEmail:nil];
+    [super viewDidUnload];
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     textField.delegate = self ;
@@ -49,10 +57,6 @@
 }
 
 - (IBAction)joinList {
-    
-    NSLog(@"First Name: %@", self.first_name.text) ;
-    NSLog(@"Last Name: %@", self.last_name.text) ;
-    NSLog(@"Email: %@", self.email.text) ;
     
     // create the new contact
     ACContact *new_contact = [[ACContact alloc] init] ;
@@ -67,14 +71,7 @@
     [self performSegueWithIdentifier:@"postSucceeded" sender:self] ;
 }
 
-- (void)viewDidUnload {
-    [self setChoosen_list:nil] ;
-    [self setChoosenListLable:nil];
-    [self setFirst_name:nil];
-    [self setLast_name:nil];
-    [self setEmail:nil];
-    [super viewDidUnload];
-}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

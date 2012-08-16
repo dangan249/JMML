@@ -24,7 +24,7 @@
 - (IBAction)viewLIsts {
     ACContactListStore *shared_store = [ACContactListStore sharedContactListStore] ;
     if( shared_store.requestSucceeded ){
-        
+        // trigger segue to view all the contact lists of users
         [self performSegueWithIdentifier:@"viewContactLists" sender:self] ;
     }
     else
@@ -35,7 +35,7 @@
 - (IBAction)joinList:(id)sender {
     ACContactListStore *shared_store = [ACContactListStore sharedContactListStore] ;
     if( shared_store.requestSucceeded ){
-        
+        // trigger segue to JMML main feature
         [self performSegueWithIdentifier:@"addContact" sender:self] ;
     }
     else

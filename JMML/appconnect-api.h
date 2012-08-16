@@ -4022,9 +4022,9 @@ static NSString *formatAPPCONNECT_APICAMPAIGNSArchiveStatusEnumTypeToString(enum
     enum APPCONNECT_APICONTACTSActionByEnum *_optOutSource;
     NSDate *_optInDate;
     NSDate *_optOutDate;
-    NSString *_email;
+    //NSString *_email;
 }
-
+@property (strong, nonatomic)NSString * email ;
 /**
  * Contact's status, must be one of {"ACTIVE", "UNCONFIRMED", "OPTOUT", "REMOVED", "NON_SUBSCRIBER", "VISITOR"}
  */
