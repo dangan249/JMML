@@ -30,7 +30,6 @@
     // load the list of all contacts here so when the user choose a contact list
     // the filering process does not need to wait for the GET /contacts call
     [[ACContactStore sharedStore] getContacts] ;
-
     self.shared_contact_list_store = [ACContactListStore sharedContactListStore] ;
 
 }

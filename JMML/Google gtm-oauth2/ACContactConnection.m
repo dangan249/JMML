@@ -108,7 +108,7 @@ static NSMutableArray *sharedContactConnectionList = nil;
                             \"line2\":\"\",\
                             \"line3\":\"\", \
                             \"city\":\"\",\
-                            \"address_type\":\"personal\",\
+                            \"address_type\":\"PERSONAL\",\
                             \"state_code\":\"\",\
                             \"country_code\":\"\",\
                             \"postal_code\":\"\",\
@@ -119,7 +119,7 @@ static NSMutableArray *sharedContactConnectionList = nil;
                             \"line2\":\"\",\
                             \"line3\":\"\",\
                             \"city\":\"\",\
-                            \"address_type\":\"business\",\
+                            \"address_type\":\"BUSINESS\",\
                             \"state_code\":\"\",\
                             \"country_code\":\"\",\
                             \"postal_code\":\"\", \
@@ -194,10 +194,50 @@ static NSMutableArray *sharedContactConnectionList = nil;
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
     //NSLog(@"POST request failed: %@", error) ;
     [ACContactStore sharedStore].requestSucceed = NO ;
-}
 
+}
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
-    [ACContactStore sharedStore].requestSucceed = YES ;
+    
+    NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
+    NSInteger statusCode = [httpResponse statusCode];
+    switch (statusCode)
+    {
+        case 200:
+        {
+            [ACContactStore sharedStore].requestSucceed = YES ;
+            break;
+		}
+        case 201:
+        {
+            [ACContactStore sharedStore].requestSucceed = YES ;
+            break;
+        }
+        case 409:
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Conflict" message:@"Email address already exists." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil,nil];
+            [alert show] ;
+            [ACContactStore sharedStore].requestSucceed = NO ;
+
+            break ;
+        }
+        case 500:
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Service error" message:@"The service is temporary unavailable" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil,nil];
+            [alert show] ;
+            [ACContactStore sharedStore].requestSucceed = NO ;
+            
+            break ;
+        }
+        
+        case 400:
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Service error" message:@"Please send an email to: adang@constantcontact.com" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil,nil];
+            [alert show] ;            [ACContactStore sharedStore].requestSucceed = NO ;
+            
+            break ;
+        }
+    }
+    
 }
 
 - (void)reachabilityDidChange:(NSNotification *)notification {
@@ -236,8 +276,15 @@ static NSMutableArray *sharedContactConnectionList = nil;
     if (error.code == 500) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Service error" message:@"The service is temporary unavailable" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil,nil];
         [alert show] ;
+        [ACContactStore sharedStore].requestSucceed = NO ;
+
     }
-  
+    else if (error.code == 400) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Service error" message:@"Please send an email to: adang@constantcontact.com" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil,nil];
+        [alert show] ;
+        [ACContactStore sharedStore].requestSucceed = NO ;
+
+    }
 
 }
 

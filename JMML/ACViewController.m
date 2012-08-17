@@ -15,7 +15,7 @@
 
 @interface ACViewController ()
 
-@property (nonatomic, strong) GTMOAuth2Authentication * shared_oauth;
+@property (nonatomic, strong) GTMOAuth2Authentication * shared_oauth ;
 
 @end
 
@@ -83,15 +83,17 @@
                  error:(NSError *)error {
     if (error != nil) {
         
-        // Authentication failed
-        NSLog(@"viewController:finishedWithAuth:error: FAILED");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Failed" message:@"Authotication process failed!!!" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil,nil];
+        [alert show] ;
         
     } else {
-        // Authentication succeeded
-        //NSLog(@"viewController:finishedWithAuth:error: SUCCEEDED, %@\n\n", auth);
+
         [((ACAppDelegate *) [[UIApplication sharedApplication] delegate] ) setAccess_token:[NSString stringWithFormat:@"Bearer %@", auth.accessToken ]];
         
         NSLog(@"Authorizatioin succeeded.  Access token: \n\n %@", [((ACAppDelegate *) [[UIApplication sharedApplication] delegate] ) access_token]) ;
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Wellcome" message:@"Welcome to JMML app" delegate:self cancelButtonTitle:@"Go to App" otherButtonTitles:nil,nil];
+        [alert show] ;
         
         // segue to ACContactListTableViewController
         [self performSegueWithIdentifier:@"logInSucceeded" sender:self] ;
