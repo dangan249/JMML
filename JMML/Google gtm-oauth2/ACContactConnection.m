@@ -29,6 +29,12 @@ static NSMutableArray *sharedContactConnectionList = nil;
     self = [super init];
     if (self) {
         
+        //Register for changes in network availability
+        NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
+        [center addObserver:self selector:@selector(reachabilityDidChange:) name:RKReachabilityDidChangeNotification object:nil];
+        
+        //Initialize RESTKIT 's RKObjectManager
+        
         self.manager =[[ RKObjectManager sharedManager] initWithBaseURL:
                        [RKURL URLWithBaseURLString:@"http://api.constantcontact.com/v2/"]] ;
         
@@ -70,17 +76,9 @@ static NSMutableArray *sharedContactConnectionList = nil;
         //[self.contactMap mapRelationship:@"email_addresses" withMapping:emailMap] ;
         
         [self.manager.mappingProvider setObjectMapping:self.contactMap forResourcePathPattern:@"/contacts"] ;
-        //[self.manager.mappingProvider registerMapping:self.contactMap withRootKeyPath:@"/contacts"] ;
         
-        //[[RKObjectManager sharedManager].mappingProvider setSerializationMapping:[self.contactMap inverseMapping]forClass:[ACContact class]] ;
-        
-        [self.manager.router routeClass:[ACContact class] toResourcePath:@"/contacts/:identifier"];
-        [self.manager.router routeClass:[ACContact class] toResourcePath:@"/contacts" forMethod:RKRequestMethodPOST] ;
-        
-        
-        //Register for changes in network availability
-        NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
-        [center addObserver:self selector:@selector(reachabilityDidChange:) name:RKReachabilityDidChangeNotification object:nil];
+        // This is needed since ARC will release the ACConnection out of memory
+        // when its waiting for a connection to come back
         
         // If this is the first connection started, create the array
         if(!sharedContactConnectionList)
@@ -200,10 +198,6 @@ static NSMutableArray *sharedContactConnectionList = nil;
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
     [ACContactStore sharedStore].requestSucceed = YES ;
-    //NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
-    //NSLog(@"POST request sent to server") ;
-    //NSLog(@"POST return status: %d", httpResponse.statusCode) ;
-    //NSLog(@"POST return payload: %@", response.MIMEType)  ;
 }
 
 - (void)reachabilityDidChange:(NSNotification *)notification {
@@ -238,7 +232,12 @@ static NSMutableArray *sharedContactConnectionList = nil;
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error{
     
     [ACContactStore sharedStore].requestSucceed = NO ;
-    //NSLog(@"The error was:  %d -- %@", error.code,  error.localizedDescription) ;
+    
+    if (error.code == 500) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Service error" message:@"The service is temporary unavailable" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil,nil];
+        [alert show] ;
+    }
+  
 
 }
 
@@ -248,30 +247,6 @@ static NSMutableArray *sharedContactConnectionList = nil;
         
         [ACContactStore sharedStore].requestSucceed = YES ;
         [ACContactStore sharedStore].listOfContacts = [objects mutableCopy];
-        
-        //NSLog(@"GET Request Succeeded") ;
-
-        /*
-        int i = 0 ;
-        
-        for (ACContact *aContact in [ACContactStore sharedStore].listOfContacts) {
-            NSLog(@"Contact %d retrieved successfully :%@",i,aContact ) ;
-            NSLog(@"Address: %@ %@\n City %@",
-                  [[aContact.addresses objectAtIndex:0] line1].description,
-                  [[aContact.addresses objectAtIndex:0] line2].description,
-                  [[aContact.addresses objectAtIndex:0] city].description) ;
-            i++ ;
-            
-            // This code will crash the program, since contacts with REMOVED status still appear in the GET call
-            // These contact has empty contact list's array ==> index out of bound error
-         //if (aContact.status == APPCONNECT_API_CONTACTS_STATUSENUM_ACTIVE) {
-         //  NSLog(@"Lists: %ld -- num of contacts: %d\n",
-         //  [((ACContactList *)[aContact.lists objectAtIndex:0]) identifier],
-         //  [[aContact.lists objectAtIndex:0] contactCount]) ;
-         //  }
-        }
-        */
-        
         
     }
     

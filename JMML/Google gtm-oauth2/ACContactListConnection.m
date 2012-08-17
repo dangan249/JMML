@@ -14,6 +14,7 @@ static NSMutableArray *sharedContactListConnectionList = nil;
 
 @interface ACContactListConnection() <RKObjectLoaderDelegate>
 @property RKObjectManager *manager ;
+
 @end
 
 @implementation ACContactListConnection
@@ -24,10 +25,12 @@ static NSMutableArray *sharedContactListConnectionList = nil;
 {
     self = [super init];
     if (self) {
+        
         // Register for changes in network availability
         NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
         [center addObserver:self selector:@selector(reachabilityDidChange:) name:RKReachabilityDidChangeNotification object:nil];
         
+        //Initialize RESTKIT 's RKObjectManager
         self.manager = [RKObjectManager objectManagerWithBaseURL:[RKURL URLWithBaseURLString:@"http://api.constantcontact.com/v2/" ]] ;
         [[self.manager client] setValue:[((ACAppDelegate *) [[UIApplication sharedApplication] delegate] ) access_token] forHTTPHeaderField:@"authorization"] ;
         [[self.manager client] setValue:@"true" forHTTPHeaderField:@"SSLClientCipher"] ;
@@ -40,7 +43,7 @@ static NSMutableArray *sharedContactListConnectionList = nil;
         [contactListMap mapKeyPath:@"name" toAttribute:@"name"] ;
         [contactListMap mapKeyPath:@"contact_count" toAttribute:@"contactCount"] ;
         
-        [[self.manager mappingProvider] setMapping:contactListMap forKeyPath:@""];
+        [self.manager.mappingProvider setObjectMapping:contactListMap forResourcePathPattern:@"/lists"] ;
         
         // If this is the first connection started, create the array
         if(!sharedContactListConnectionList)
@@ -94,23 +97,12 @@ static NSMutableArray *sharedContactListConnectionList = nil;
     
     [ACContactListStore sharedContactListStore].requestSucceeded = NO ;
     
-    //NSLog(@"The error was:  %d", error.code) ;
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects{
-    //NSLog(@"Request Succeeded") ;
     
     [ACContactListStore sharedContactListStore].requestSucceeded = YES ;
     [ACContactListStore sharedContactListStore].listOfContactLists = [objects mutableCopy];
-
-
-    /*
-     int i = 0 ;
-    for (ACContactList *aList in [ACContactListStore sharedContactListStore].listOfContactLists) {
-        NSLog(@"Contact List %d retrieved successfully :\n\n %@",i,aList ) ;
-        i++ ;
-    }
-     */
     
 }
 

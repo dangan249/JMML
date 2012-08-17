@@ -48,7 +48,6 @@
     }];
     
         
-        
     // get an instance of the shared_contact_store
     self.shared_contact_store = [ACContactStore sharedStore] ;
     self.allContactInChoosenList = [[self.shared_contact_store allContacts] filteredArrayUsingPredicate:condition];

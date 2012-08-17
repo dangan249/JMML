@@ -28,17 +28,19 @@
     
     self.contact = [((ACAppDelegate *) [[UIApplication sharedApplication] delegate] ) contactToDisplay] ;
     
-    self.contactName.text = [NSString stringWithFormat:@"%@ %@",self.contact.firstName, self.contact.lastName] ;
+    if (self.contact) {
+        self.contactName.text = [NSString stringWithFormat:@"%@ %@",self.contact.firstName, self.contact.lastName] ;
     
-    APPCONNECT_APICONTACTSAddress *address1 = [self.contact.addresses objectAtIndex:0] ;
-    self.firstAddress.text = [NSString stringWithFormat:@"%@ %@ %@", address1.line1, address1.line2, address1.line3] ;
-    self.firstState.text = address1.stateCode ;
-    self.firstCountry.text = address1.countryCode ;
+        APPCONNECT_APICONTACTSAddress *address1 = [self.contact.addresses objectAtIndex:0] ;
+        self.firstAddress.text = [NSString stringWithFormat:@"%@ %@ %@", address1.line1, address1.line2, address1.line3] ;
+        self.firstState.text = address1.stateCode ;
+        self.firstCountry.text = address1.countryCode ;
     
-    APPCONNECT_APICONTACTSAddress *address2 = [self.contact.addresses objectAtIndex:1] ;
-    self.secondAddress.text = [NSString stringWithFormat:@"%@ %@ %@", address2.line1, address2.line2, address2.line3] ;
-    self.secondState.text = address1.stateCode ;
-    self.secondCountry.text = address1.countryCode ;
+        APPCONNECT_APICONTACTSAddress *address2 = [self.contact.addresses objectAtIndex:1] ;
+        self.secondAddress.text = [NSString stringWithFormat:@"%@ %@ %@", address2.line1, address2.line2, address2.line3] ;
+        self.secondState.text = address1.stateCode ;
+        self.secondCountry.text = address1.countryCode ;
+    }
     
 }
 
