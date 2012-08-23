@@ -232,7 +232,7 @@
                     </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-294" y="-151"/>
+            <point key="canvasLocation" x="-718" y="-103"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y1a-1g-bcv">
@@ -532,13 +532,51 @@
         <image name="CTCT_pic.jpg" width="416" height="500"/>
         <image name="Default.png" width="500" height="500"/>
     </resources>
+    <classes>
+        <class className="ACAddingContactViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ACAddingContactViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="choosenListLable" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="first_name" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="last_name" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ACContactInfoViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ACContactInfoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="contactName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="firstAddress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="firstCountry" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="firstState" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="secondAddress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="secondCountry" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="secondState" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ACContactListPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ACContactListPickerViewController.h"/>
+        </class>
+        <class className="ACContactListTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ACContactListTableViewController.h"/>
+        </class>
+        <class className="ACContactTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ACContactTableViewController.h"/>
+        </class>
+        <class className="ACViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ACViewController.h"/>
+        </class>
+        <class className="ACWellcomeScreenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ACWellcomeScreenViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="swH-Pd-cnA"/>
         <segue reference="4sn-8B-NEF"/>
+        <segue reference="swH-Pd-cnA"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,6 +9,28 @@
 /* Begin PBXBuildFile section */
 		86D48D4915DC06C00098A176 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D48D3015DC05D30098A176 /* libRestKit.a */; };
 		86EBBA9015DD4494003996C2 /* ACContactInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EBBA8F15DD4494003996C2 /* ACContactInfoViewController.m */; };
+		86F11A9015E6DEDD00807809 /* CTCT_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86F11A8E15E6DEDD00807809 /* CTCT_pic.jpg */; };
+		86F11A9115E6DEDD00807809 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F11A8F15E6DEDD00807809 /* Default.png */; };
+		86F11A9715E6DF2100807809 /* ACWellcomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11A9615E6DF2100807809 /* ACWellcomeScreenViewController.m */; };
+		86F11A9815E6DF2100807809 /* ACWellcomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11A9615E6DF2100807809 /* ACWellcomeScreenViewController.m */; };
+		86F11A9B15E6DF3300807809 /* ACContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11A9A15E6DF3300807809 /* ACContactListTableViewController.m */; };
+		86F11A9C15E6DF3300807809 /* ACContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11A9A15E6DF3300807809 /* ACContactListTableViewController.m */; };
+		86F11A9F15E6DF3E00807809 /* ACContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11A9E15E6DF3E00807809 /* ACContactTableViewController.m */; };
+		86F11AA015E6DF3E00807809 /* ACContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11A9E15E6DF3E00807809 /* ACContactTableViewController.m */; };
+		86F11AA315E6DF4B00807809 /* ACContactListPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11AA215E6DF4B00807809 /* ACContactListPickerViewController.m */; };
+		86F11AA415E6DF4B00807809 /* ACContactListPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11AA215E6DF4B00807809 /* ACContactListPickerViewController.m */; };
+		86F11AA915E6DF5C00807809 /* ACContactListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11AA615E6DF5C00807809 /* ACContactListStore.m */; };
+		86F11AAA15E6DF5C00807809 /* ACContactListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11AA615E6DF5C00807809 /* ACContactListStore.m */; };
+		86F11AAB15E6DF5C00807809 /* ACContactStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11AA815E6DF5C00807809 /* ACContactStore.m */; };
+		86F11AAC15E6DF5C00807809 /* ACContactStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11AA815E6DF5C00807809 /* ACContactStore.m */; };
+		86F11AB115E6DF7600807809 /* ACContactConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11AAE15E6DF7600807809 /* ACContactConnection.m */; };
+		86F11AB215E6DF7600807809 /* ACContactConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11AAE15E6DF7600807809 /* ACContactConnection.m */; };
+		86F11AB315E6DF7600807809 /* ACContactListConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11AB015E6DF7600807809 /* ACContactListConnection.m */; };
+		86F11AB415E6DF7600807809 /* ACContactListConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11AB015E6DF7600807809 /* ACContactListConnection.m */; };
+		86F11AB915E6DF8400807809 /* ACContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11AB615E6DF8400807809 /* ACContact.m */; };
+		86F11ABA15E6DF8400807809 /* ACContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11AB615E6DF8400807809 /* ACContact.m */; };
+		86F11ABB15E6DF8400807809 /* ACContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11AB815E6DF8400807809 /* ACContactList.m */; };
+		86F11ABC15E6DF8400807809 /* ACContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F11AB815E6DF8400807809 /* ACContactList.m */; };
 		86F8580815DBED7C00A3BF15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F8580715DBED7C00A3BF15 /* UIKit.framework */; };
 		86F8580A15DBED7C00A3BF15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F8580915DBED7C00A3BF15 /* Foundation.framework */; };
 		86F8580C15DBED7C00A3BF15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F8580B15DBED7C00A3BF15 /* CoreGraphics.framework */; };
@@ -36,30 +58,6 @@
 		86F8585615DBEE1700A3BF15 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8584D15DBEE1700A3BF15 /* GTMOAuth2ViewControllerTouch.m */; };
 		86F8585715DBEE1700A3BF15 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F8584E15DBEE1700A3BF15 /* GTMOAuth2ViewTouch.xib */; };
 		86F8585815DBEE1700A3BF15 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F8584E15DBEE1700A3BF15 /* GTMOAuth2ViewTouch.xib */; };
-		86F8587B15DBEE5300A3BF15 /* ACContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8585E15DBEE5200A3BF15 /* ACContact.m */; };
-		86F8587C15DBEE5300A3BF15 /* ACContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8585E15DBEE5200A3BF15 /* ACContact.m */; };
-		86F8587D15DBEE5300A3BF15 /* ACContactConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586015DBEE5200A3BF15 /* ACContactConnection.m */; };
-		86F8587E15DBEE5300A3BF15 /* ACContactConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586015DBEE5200A3BF15 /* ACContactConnection.m */; };
-		86F8588115DBEE5300A3BF15 /* ACContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586415DBEE5200A3BF15 /* ACContactList.m */; };
-		86F8588215DBEE5300A3BF15 /* ACContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586415DBEE5200A3BF15 /* ACContactList.m */; };
-		86F8588315DBEE5300A3BF15 /* ACContactListConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586615DBEE5200A3BF15 /* ACContactListConnection.m */; };
-		86F8588415DBEE5300A3BF15 /* ACContactListConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586615DBEE5200A3BF15 /* ACContactListConnection.m */; };
-		86F8588515DBEE5300A3BF15 /* ACContactListPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586815DBEE5200A3BF15 /* ACContactListPickerViewController.m */; };
-		86F8588615DBEE5300A3BF15 /* ACContactListPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586815DBEE5200A3BF15 /* ACContactListPickerViewController.m */; };
-		86F8588715DBEE5300A3BF15 /* ACContactListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586A15DBEE5200A3BF15 /* ACContactListStore.m */; };
-		86F8588815DBEE5300A3BF15 /* ACContactListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586A15DBEE5200A3BF15 /* ACContactListStore.m */; };
-		86F8588915DBEE5300A3BF15 /* ACContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586C15DBEE5200A3BF15 /* ACContactListTableViewController.m */; };
-		86F8588A15DBEE5300A3BF15 /* ACContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586C15DBEE5200A3BF15 /* ACContactListTableViewController.m */; };
-		86F8588B15DBEE5300A3BF15 /* ACContactStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586E15DBEE5200A3BF15 /* ACContactStore.m */; };
-		86F8588C15DBEE5300A3BF15 /* ACContactStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8586E15DBEE5200A3BF15 /* ACContactStore.m */; };
-		86F8588D15DBEE5300A3BF15 /* ACContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8587015DBEE5200A3BF15 /* ACContactTableViewController.m */; };
-		86F8588E15DBEE5300A3BF15 /* ACContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8587015DBEE5200A3BF15 /* ACContactTableViewController.m */; };
-		86F8589115DBEE5300A3BF15 /* ACWellcomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8587415DBEE5200A3BF15 /* ACWellcomeScreenViewController.m */; };
-		86F8589215DBEE5300A3BF15 /* ACWellcomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F8587415DBEE5200A3BF15 /* ACWellcomeScreenViewController.m */; };
-		86F8589315DBEE5300A3BF15 /* CTCT_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86F8587515DBEE5200A3BF15 /* CTCT_pic.jpg */; };
-		86F8589415DBEE5300A3BF15 /* CTCT_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86F8587515DBEE5200A3BF15 /* CTCT_pic.jpg */; };
-		86F8589515DBEE5300A3BF15 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F8587615DBEE5300A3BF15 /* Default.png */; };
-		86F8589615DBEE5300A3BF15 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F8587615DBEE5300A3BF15 /* Default.png */; };
 		86F858A215DBF46700A3BF15 /* ACAddingContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F858A115DBF46700A3BF15 /* ACAddingContactTableViewController.m */; };
 		86F858A315DBF46700A3BF15 /* ACAddingContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F858A115DBF46700A3BF15 /* ACAddingContactTableViewController.m */; };
 		86F858B115DC048700A3BF15 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F858B015DC048700A3BF15 /* SystemConfiguration.framework */; };
@@ -120,6 +118,28 @@
 		86D48D2415DC05D30098A176 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		86EBBA8E15DD4494003996C2 /* ACContactInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACContactInfoViewController.h; sourceTree = "<group>"; };
 		86EBBA8F15DD4494003996C2 /* ACContactInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACContactInfoViewController.m; sourceTree = "<group>"; };
+		86F11A8E15E6DEDD00807809 /* CTCT_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CTCT_pic.jpg; sourceTree = "<group>"; };
+		86F11A8F15E6DEDD00807809 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		86F11A9515E6DF2100807809 /* ACWellcomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACWellcomeScreenViewController.h; sourceTree = "<group>"; };
+		86F11A9615E6DF2100807809 /* ACWellcomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACWellcomeScreenViewController.m; sourceTree = "<group>"; };
+		86F11A9915E6DF3300807809 /* ACContactListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACContactListTableViewController.h; sourceTree = "<group>"; };
+		86F11A9A15E6DF3300807809 /* ACContactListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACContactListTableViewController.m; sourceTree = "<group>"; };
+		86F11A9D15E6DF3E00807809 /* ACContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACContactTableViewController.h; sourceTree = "<group>"; };
+		86F11A9E15E6DF3E00807809 /* ACContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACContactTableViewController.m; sourceTree = "<group>"; };
+		86F11AA115E6DF4B00807809 /* ACContactListPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACContactListPickerViewController.h; sourceTree = "<group>"; };
+		86F11AA215E6DF4B00807809 /* ACContactListPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACContactListPickerViewController.m; sourceTree = "<group>"; };
+		86F11AA515E6DF5C00807809 /* ACContactListStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACContactListStore.h; sourceTree = "<group>"; };
+		86F11AA615E6DF5C00807809 /* ACContactListStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACContactListStore.m; sourceTree = "<group>"; };
+		86F11AA715E6DF5C00807809 /* ACContactStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACContactStore.h; sourceTree = "<group>"; };
+		86F11AA815E6DF5C00807809 /* ACContactStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACContactStore.m; sourceTree = "<group>"; };
+		86F11AAD15E6DF7600807809 /* ACContactConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACContactConnection.h; sourceTree = "<group>"; };
+		86F11AAE15E6DF7600807809 /* ACContactConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACContactConnection.m; sourceTree = "<group>"; };
+		86F11AAF15E6DF7600807809 /* ACContactListConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACContactListConnection.h; sourceTree = "<group>"; };
+		86F11AB015E6DF7600807809 /* ACContactListConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACContactListConnection.m; sourceTree = "<group>"; };
+		86F11AB515E6DF8400807809 /* ACContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACContact.h; sourceTree = "<group>"; };
+		86F11AB615E6DF8400807809 /* ACContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACContact.m; sourceTree = "<group>"; };
+		86F11AB715E6DF8400807809 /* ACContactList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACContactList.h; sourceTree = "<group>"; };
+		86F11AB815E6DF8400807809 /* ACContactList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACContactList.m; sourceTree = "<group>"; };
 		86F8580315DBED7C00A3BF15 /* JMML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F8580715DBED7C00A3BF15 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		86F8580915DBED7C00A3BF15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -153,28 +173,6 @@
 		86F8584C15DBEE1700A3BF15 /* GTMOAuth2ViewControllerTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2ViewControllerTouch.h; sourceTree = "<group>"; };
 		86F8584D15DBEE1700A3BF15 /* GTMOAuth2ViewControllerTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2ViewControllerTouch.m; sourceTree = "<group>"; };
 		86F8584E15DBEE1700A3BF15 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
-		86F8585D15DBEE5200A3BF15 /* ACContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContact.h; path = "Google gtm-oauth2/ACContact.h"; sourceTree = "<group>"; };
-		86F8585E15DBEE5200A3BF15 /* ACContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContact.m; path = "Google gtm-oauth2/ACContact.m"; sourceTree = "<group>"; };
-		86F8585F15DBEE5200A3BF15 /* ACContactConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactConnection.h; path = "Google gtm-oauth2/ACContactConnection.h"; sourceTree = "<group>"; };
-		86F8586015DBEE5200A3BF15 /* ACContactConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactConnection.m; path = "Google gtm-oauth2/ACContactConnection.m"; sourceTree = "<group>"; };
-		86F8586315DBEE5200A3BF15 /* ACContactList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactList.h; path = "Google gtm-oauth2/ACContactList.h"; sourceTree = "<group>"; };
-		86F8586415DBEE5200A3BF15 /* ACContactList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactList.m; path = "Google gtm-oauth2/ACContactList.m"; sourceTree = "<group>"; };
-		86F8586515DBEE5200A3BF15 /* ACContactListConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactListConnection.h; path = "Google gtm-oauth2/ACContactListConnection.h"; sourceTree = "<group>"; };
-		86F8586615DBEE5200A3BF15 /* ACContactListConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactListConnection.m; path = "Google gtm-oauth2/ACContactListConnection.m"; sourceTree = "<group>"; };
-		86F8586715DBEE5200A3BF15 /* ACContactListPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactListPickerViewController.h; path = "Google gtm-oauth2/ACContactListPickerViewController.h"; sourceTree = "<group>"; };
-		86F8586815DBEE5200A3BF15 /* ACContactListPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactListPickerViewController.m; path = "Google gtm-oauth2/ACContactListPickerViewController.m"; sourceTree = "<group>"; };
-		86F8586915DBEE5200A3BF15 /* ACContactListStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactListStore.h; path = "Google gtm-oauth2/ACContactListStore.h"; sourceTree = "<group>"; };
-		86F8586A15DBEE5200A3BF15 /* ACContactListStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactListStore.m; path = "Google gtm-oauth2/ACContactListStore.m"; sourceTree = "<group>"; };
-		86F8586B15DBEE5200A3BF15 /* ACContactListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactListTableViewController.h; path = "Google gtm-oauth2/ACContactListTableViewController.h"; sourceTree = "<group>"; };
-		86F8586C15DBEE5200A3BF15 /* ACContactListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactListTableViewController.m; path = "Google gtm-oauth2/ACContactListTableViewController.m"; sourceTree = "<group>"; };
-		86F8586D15DBEE5200A3BF15 /* ACContactStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactStore.h; path = "Google gtm-oauth2/ACContactStore.h"; sourceTree = "<group>"; };
-		86F8586E15DBEE5200A3BF15 /* ACContactStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactStore.m; path = "Google gtm-oauth2/ACContactStore.m"; sourceTree = "<group>"; };
-		86F8586F15DBEE5200A3BF15 /* ACContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACContactTableViewController.h; path = "Google gtm-oauth2/ACContactTableViewController.h"; sourceTree = "<group>"; };
-		86F8587015DBEE5200A3BF15 /* ACContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACContactTableViewController.m; path = "Google gtm-oauth2/ACContactTableViewController.m"; sourceTree = "<group>"; };
-		86F8587315DBEE5200A3BF15 /* ACWellcomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACWellcomeScreenViewController.h; path = "Google gtm-oauth2/ACWellcomeScreenViewController.h"; sourceTree = "<group>"; };
-		86F8587415DBEE5200A3BF15 /* ACWellcomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACWellcomeScreenViewController.m; path = "Google gtm-oauth2/ACWellcomeScreenViewController.m"; sourceTree = "<group>"; };
-		86F8587515DBEE5200A3BF15 /* CTCT_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = CTCT_pic.jpg; path = "Google gtm-oauth2/CTCT_pic.jpg"; sourceTree = "<group>"; };
-		86F8587615DBEE5300A3BF15 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "Google gtm-oauth2/Default.png"; sourceTree = "<group>"; };
 		86F858A015DBF46700A3BF15 /* ACAddingContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAddingContactTableViewController.h; sourceTree = "<group>"; };
 		86F858A115DBF46700A3BF15 /* ACAddingContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAddingContactTableViewController.m; sourceTree = "<group>"; };
 		86F858B015DC048700A3BF15 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -334,10 +332,10 @@
 		86F8589715DBEF0B00A3BF15 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				86F8585D15DBEE5200A3BF15 /* ACContact.h */,
-				86F8585E15DBEE5200A3BF15 /* ACContact.m */,
-				86F8586315DBEE5200A3BF15 /* ACContactList.h */,
-				86F8586415DBEE5200A3BF15 /* ACContactList.m */,
+				86F11AB515E6DF8400807809 /* ACContact.h */,
+				86F11AB615E6DF8400807809 /* ACContact.m */,
+				86F11AB715E6DF8400807809 /* ACContactList.h */,
+				86F11AB815E6DF8400807809 /* ACContactList.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -345,11 +343,11 @@
 		86F8589815DBEF1C00A3BF15 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				86F11AA515E6DF5C00807809 /* ACContactListStore.h */,
+				86F11AA615E6DF5C00807809 /* ACContactListStore.m */,
+				86F11AA715E6DF5C00807809 /* ACContactStore.h */,
+				86F11AA815E6DF5C00807809 /* ACContactStore.m */,
 				86F8589A15DBEF5E00A3BF15 /* Store Connections */,
-				86F8586915DBEE5200A3BF15 /* ACContactListStore.h */,
-				86F8586A15DBEE5200A3BF15 /* ACContactListStore.m */,
-				86F8586D15DBEE5200A3BF15 /* ACContactStore.h */,
-				86F8586E15DBEE5200A3BF15 /* ACContactStore.m */,
 			);
 			name = Stores;
 			sourceTree = "<group>";
@@ -357,8 +355,8 @@
 		86F8589915DBEF3C00A3BF15 /* Adding Contact VC */ = {
 			isa = PBXGroup;
 			children = (
-				86F8586715DBEE5200A3BF15 /* ACContactListPickerViewController.h */,
-				86F8586815DBEE5200A3BF15 /* ACContactListPickerViewController.m */,
+				86F11AA115E6DF4B00807809 /* ACContactListPickerViewController.h */,
+				86F11AA215E6DF4B00807809 /* ACContactListPickerViewController.m */,
 				86F858A015DBF46700A3BF15 /* ACAddingContactTableViewController.h */,
 				86F858A115DBF46700A3BF15 /* ACAddingContactTableViewController.m */,
 			);
@@ -368,10 +366,10 @@
 		86F8589A15DBEF5E00A3BF15 /* Store Connections */ = {
 			isa = PBXGroup;
 			children = (
-				86F8585F15DBEE5200A3BF15 /* ACContactConnection.h */,
-				86F8586015DBEE5200A3BF15 /* ACContactConnection.m */,
-				86F8586515DBEE5200A3BF15 /* ACContactListConnection.h */,
-				86F8586615DBEE5200A3BF15 /* ACContactListConnection.m */,
+				86F11AAD15E6DF7600807809 /* ACContactConnection.h */,
+				86F11AAE15E6DF7600807809 /* ACContactConnection.m */,
+				86F11AAF15E6DF7600807809 /* ACContactListConnection.h */,
+				86F11AB015E6DF7600807809 /* ACContactListConnection.m */,
 			);
 			name = "Store Connections";
 			sourceTree = "<group>";
@@ -379,8 +377,8 @@
 		86F8589B15DBEF9400A3BF15 /* Contact Table */ = {
 			isa = PBXGroup;
 			children = (
-				86F8586F15DBEE5200A3BF15 /* ACContactTableViewController.h */,
-				86F8587015DBEE5200A3BF15 /* ACContactTableViewController.m */,
+				86F11A9D15E6DF3E00807809 /* ACContactTableViewController.h */,
+				86F11A9E15E6DF3E00807809 /* ACContactTableViewController.m */,
 				86EBBA8E15DD4494003996C2 /* ACContactInfoViewController.h */,
 				86EBBA8F15DD4494003996C2 /* ACContactInfoViewController.m */,
 			);
@@ -390,8 +388,8 @@
 		86F8589C15DBEFA700A3BF15 /* Contact List Table */ = {
 			isa = PBXGroup;
 			children = (
-				86F8586B15DBEE5200A3BF15 /* ACContactListTableViewController.h */,
-				86F8586C15DBEE5200A3BF15 /* ACContactListTableViewController.m */,
+				86F11A9915E6DF3300807809 /* ACContactListTableViewController.h */,
+				86F11A9A15E6DF3300807809 /* ACContactListTableViewController.m */,
 			);
 			name = "Contact List Table";
 			sourceTree = "<group>";
@@ -410,9 +408,9 @@
 		86F8589E15DBEFF400A3BF15 /* ROOT */ = {
 			isa = PBXGroup;
 			children = (
+				86F11A9515E6DF2100807809 /* ACWellcomeScreenViewController.h */,
+				86F11A9615E6DF2100807809 /* ACWellcomeScreenViewController.m */,
 				86F8589F15DBF00C00A3BF15 /* Resources */,
-				86F8587315DBEE5200A3BF15 /* ACWellcomeScreenViewController.h */,
-				86F8587415DBEE5200A3BF15 /* ACWellcomeScreenViewController.m */,
 				86F8581615DBED7C00A3BF15 /* ACAppDelegate.h */,
 				86F8581715DBED7C00A3BF15 /* ACAppDelegate.m */,
 				86F8581915DBED7C00A3BF15 /* MainStoryboard.storyboard */,
@@ -425,8 +423,8 @@
 		86F8589F15DBF00C00A3BF15 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				86F8587515DBEE5200A3BF15 /* CTCT_pic.jpg */,
-				86F8587615DBEE5300A3BF15 /* Default.png */,
+				86F11A8E15E6DEDD00807809 /* CTCT_pic.jpg */,
+				86F11A8F15E6DEDD00807809 /* Default.png */,
 				86F8583C15DBEE0C00A3BF15 /* ACConstants.h */,
 			);
 			name = Resources;
@@ -551,8 +549,8 @@
 				86F8581215DBED7C00A3BF15 /* InfoPlist.strings in Resources */,
 				86F8581B15DBED7C00A3BF15 /* MainStoryboard.storyboard in Resources */,
 				86F8585715DBEE1700A3BF15 /* GTMOAuth2ViewTouch.xib in Resources */,
-				86F8589315DBEE5300A3BF15 /* CTCT_pic.jpg in Resources */,
-				86F8589515DBEE5300A3BF15 /* Default.png in Resources */,
+				86F11A9015E6DEDD00807809 /* CTCT_pic.jpg in Resources */,
+				86F11A9115E6DEDD00807809 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,8 +560,6 @@
 			files = (
 				86F8583015DBED7C00A3BF15 /* InfoPlist.strings in Resources */,
 				86F8585815DBEE1700A3BF15 /* GTMOAuth2ViewTouch.xib in Resources */,
-				86F8589415DBEE5300A3BF15 /* CTCT_pic.jpg in Resources */,
-				86F8589615DBEE5300A3BF15 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,18 +595,18 @@
 				86F8585115DBEE1700A3BF15 /* GTMOAuth2Authentication.m in Sources */,
 				86F8585315DBEE1700A3BF15 /* GTMOAuth2SignIn.m in Sources */,
 				86F8585515DBEE1700A3BF15 /* GTMOAuth2ViewControllerTouch.m in Sources */,
-				86F8587B15DBEE5300A3BF15 /* ACContact.m in Sources */,
-				86F8587D15DBEE5300A3BF15 /* ACContactConnection.m in Sources */,
-				86F8588115DBEE5300A3BF15 /* ACContactList.m in Sources */,
-				86F8588315DBEE5300A3BF15 /* ACContactListConnection.m in Sources */,
-				86F8588515DBEE5300A3BF15 /* ACContactListPickerViewController.m in Sources */,
-				86F8588715DBEE5300A3BF15 /* ACContactListStore.m in Sources */,
-				86F8588915DBEE5300A3BF15 /* ACContactListTableViewController.m in Sources */,
-				86F8588B15DBEE5300A3BF15 /* ACContactStore.m in Sources */,
-				86F8588D15DBEE5300A3BF15 /* ACContactTableViewController.m in Sources */,
-				86F8589115DBEE5300A3BF15 /* ACWellcomeScreenViewController.m in Sources */,
 				86F858A215DBF46700A3BF15 /* ACAddingContactTableViewController.m in Sources */,
 				86EBBA9015DD4494003996C2 /* ACContactInfoViewController.m in Sources */,
+				86F11A9715E6DF2100807809 /* ACWellcomeScreenViewController.m in Sources */,
+				86F11A9B15E6DF3300807809 /* ACContactListTableViewController.m in Sources */,
+				86F11A9F15E6DF3E00807809 /* ACContactTableViewController.m in Sources */,
+				86F11AA315E6DF4B00807809 /* ACContactListPickerViewController.m in Sources */,
+				86F11AA915E6DF5C00807809 /* ACContactListStore.m in Sources */,
+				86F11AAB15E6DF5C00807809 /* ACContactStore.m in Sources */,
+				86F11AB115E6DF7600807809 /* ACContactConnection.m in Sources */,
+				86F11AB315E6DF7600807809 /* ACContactListConnection.m in Sources */,
+				86F11AB915E6DF8400807809 /* ACContact.m in Sources */,
+				86F11ABB15E6DF8400807809 /* ACContactList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,17 +621,17 @@
 				86F8585215DBEE1700A3BF15 /* GTMOAuth2Authentication.m in Sources */,
 				86F8585415DBEE1700A3BF15 /* GTMOAuth2SignIn.m in Sources */,
 				86F8585615DBEE1700A3BF15 /* GTMOAuth2ViewControllerTouch.m in Sources */,
-				86F8587C15DBEE5300A3BF15 /* ACContact.m in Sources */,
-				86F8587E15DBEE5300A3BF15 /* ACContactConnection.m in Sources */,
-				86F8588215DBEE5300A3BF15 /* ACContactList.m in Sources */,
-				86F8588415DBEE5300A3BF15 /* ACContactListConnection.m in Sources */,
-				86F8588615DBEE5300A3BF15 /* ACContactListPickerViewController.m in Sources */,
-				86F8588815DBEE5300A3BF15 /* ACContactListStore.m in Sources */,
-				86F8588A15DBEE5300A3BF15 /* ACContactListTableViewController.m in Sources */,
-				86F8588C15DBEE5300A3BF15 /* ACContactStore.m in Sources */,
-				86F8588E15DBEE5300A3BF15 /* ACContactTableViewController.m in Sources */,
-				86F8589215DBEE5300A3BF15 /* ACWellcomeScreenViewController.m in Sources */,
 				86F858A315DBF46700A3BF15 /* ACAddingContactTableViewController.m in Sources */,
+				86F11A9815E6DF2100807809 /* ACWellcomeScreenViewController.m in Sources */,
+				86F11A9C15E6DF3300807809 /* ACContactListTableViewController.m in Sources */,
+				86F11AA015E6DF3E00807809 /* ACContactTableViewController.m in Sources */,
+				86F11AA415E6DF4B00807809 /* ACContactListPickerViewController.m in Sources */,
+				86F11AAA15E6DF5C00807809 /* ACContactListStore.m in Sources */,
+				86F11AAC15E6DF5C00807809 /* ACContactStore.m in Sources */,
+				86F11AB215E6DF7600807809 /* ACContactConnection.m in Sources */,
+				86F11AB415E6DF7600807809 /* ACContactListConnection.m in Sources */,
+				86F11ABA15E6DF8400807809 /* ACContact.m in Sources */,
+				86F11ABC15E6DF8400807809 /* ACContactList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
