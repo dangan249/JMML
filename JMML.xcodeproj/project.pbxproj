@@ -232,7 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				86D48D2415DC05D30098A176 /* RestKit.xcodeproj */,
-				86F8589D15DBEFC900A3BF15 /* Appconnect */,
+				86F8589D15DBEFC900A3BF15 /* Appconnect Generated Domain Objects */,
 				86F8584515DBEE1700A3BF15 /* Google gtm-oauth2 */,
 				86F8580D15DBED7C00A3BF15 /* JMML */,
 				86F8582B15DBED7C00A3BF15 /* JMMLTests */,
@@ -394,7 +394,7 @@
 			name = "Contact List Table";
 			sourceTree = "<group>";
 		};
-		86F8589D15DBEFC900A3BF15 /* Appconnect */ = {
+		86F8589D15DBEFC900A3BF15 /* Appconnect Generated Domain Objects */ = {
 			isa = PBXGroup;
 			children = (
 				86F8583D15DBEE0C00A3BF15 /* appconnect-api.h */,
@@ -402,7 +402,7 @@
 				86F8583F15DBEE0C00A3BF15 /* enunciate-common.h */,
 				86F8584015DBEE0C00A3BF15 /* enunciate-common.m */,
 			);
-			name = Appconnect;
+			name = "Appconnect Generated Domain Objects";
 			sourceTree = "<group>";
 		};
 		86F8589E15DBEFF400A3BF15 /* ROOT */ = {

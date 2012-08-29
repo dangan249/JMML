@@ -97,6 +97,14 @@ static NSMutableArray *sharedContactConnectionList = nil;
 }
 
 
+// There are many way to do a Post
+// this method just create a string by formatting it, the lengthy string is copied from documentation Beta API page
+
+// Future: when RestKit is updated with new documentation
+// --> we can find a way to reverse the mapping and allow JSON serilization of Contact object
+// --> the method will contain only 1 line that look similar like this
+//     [self.manage post: newContact withSerilization: [contactMap reverseMapping]] ;
+
 - (void) postContact: (ACContact *) newContact{
     
     NSString *postString = [NSString stringWithFormat: @"{ \
@@ -192,10 +200,21 @@ static NSMutableArray *sharedContactConnectionList = nil;
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
-    //NSLog(@"POST request failed: %@", error) ;
     [ACContactStore sharedStore].requestSucceed = NO ;
-
 }
+
+// this method will create a message box that display validation errors
+- (void)alert: (NSString *) title withMessage:(NSString *)message {
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+                                                    message:message
+                                                   delegate:self
+                                          cancelButtonTitle:@"Cancel"
+                                          otherButtonTitles:nil,nil];
+    [alert show] ;
+    
+}
+
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
     
     NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
@@ -214,16 +233,15 @@ static NSMutableArray *sharedContactConnectionList = nil;
         }
         case 409:
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Conflict" message:@"Email address already exists." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil,nil];
-            [alert show] ;
+           
+            [self alert:@"Confliction happened in Server" withMessage:@"Email address already exists."];
             [ACContactStore sharedStore].requestSucceed = NO ;
 
             break ;
         }
         case 500:
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Service error" message:@"The service is temporary unavailable" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil,nil];
-            [alert show] ;
+            [self alert:@"Service Error" withMessage:@"The service is temporarily unavailable"] ;
             [ACContactStore sharedStore].requestSucceed = NO ;
             
             break ;
@@ -231,9 +249,7 @@ static NSMutableArray *sharedContactConnectionList = nil;
         
         case 400:
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Service error" message:@"Please send an email to: adang@constantcontact.com" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil,nil];
-            [alert show] ;            [ACContactStore sharedStore].requestSucceed = NO ;
-            
+            [self alert:@"Service Error" withMessage:@"Please send an email to: adang@constantcontact.com OR dang.an249@gmail.com"];
             break ;
         }
     }
@@ -250,21 +266,9 @@ static NSMutableArray *sharedContactConnectionList = nil;
         RKLogInfo(@"No network access!");
         [alert show];
     }
-    else if ( RKReachabilityNotReachable == RKReachabilityReachableViaWiFi){
-        RKLogInfo(@"On Wifi") ;
-    }
-    
+
 }
 
-
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 0) {
-        NSLog(@"Cancel Tapped.");
-    }
-    else if (buttonIndex == 1) {
-        NSLog(@"OK Tapped");
-    }
-}
 
 /**
  * Sent when an object loaded failed to load the collection due to an error
@@ -274,20 +278,22 @@ static NSMutableArray *sharedContactConnectionList = nil;
     [ACContactStore sharedStore].requestSucceed = NO ;
     
     if (error.code == 500) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Service error" message:@"The service is temporary unavailable" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil,nil];
-        [alert show] ;
+        [self alert:@"Service Error" withMessage:@"The service is temporarily unavailable"] ;
         [ACContactStore sharedStore].requestSucceed = NO ;
 
     }
     else if (error.code == 400) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Service error" message:@"Please send an email to: adang@constantcontact.com" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil,nil];
-        [alert show] ;
+        
+        [self alert:@"Service Error" withMessage:@"Please send an email to: adang@constantcontact.com OR dang.an249@gmail.com"] ;
         [ACContactStore sharedStore].requestSucceed = NO ;
 
     }
 
 }
 
+/**
+ * Sent when an object loaded succeded in loading 
+ */
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects{
     
     if( objectLoader.response.request.method == RKRequestMethodGET ){

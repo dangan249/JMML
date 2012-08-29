@@ -23,6 +23,7 @@
 @synthesize shared_contact_list_store = _shared_contact_list_store ;
 @synthesize selectedList = _selectedList ;
 
+#pragma mark - Life Cycle Methods
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -39,19 +40,20 @@
     self.shared_contact_list_store = nil ;
     self.selectedList = nil ;
 }
+
 -(void) viewWillAppear:(BOOL)animated{
     [[self navigationController] setNavigationBarHidden:NO] ;
 }
 
-// If you don't understand these data source + delegate's methods
-// Please do some research about how to set up UITableViewController
 #pragma mark - Table view data source
 
+// return the number of Contact Lists 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [[self.shared_contact_list_store allLists] count] ;
 }
 
+// return each Contact List for each row
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"ContactList";
@@ -74,6 +76,7 @@
          
 #pragma mark - Table view delegate
 
+// each row ( represent a Contact List ) get selected and the code will bring user to the view that list all contacts of a list
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [[self navigationController] setNavigationBarHidden:NO] ;

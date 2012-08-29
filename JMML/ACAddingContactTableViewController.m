@@ -25,6 +25,8 @@
 @synthesize choosen_list = _choosen_list ;
 @synthesize shared_store = _shared_store ;
 
+#pragma mark - Life Cycle Methods
+
 - (void)viewDidLoad{
     
     [super viewDidLoad];
@@ -57,6 +59,23 @@
     return YES ;
 }
 
+#pragma mark - JMML
+
+// this method will create a message box that display validation errors
+- (void)alert: (NSString *) title withMessage:(NSString *)message {
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+                                                    message:message
+                                                   delegate:self
+                                          cancelButtonTitle:@"Cancel"
+                                          otherButtonTitles:nil,nil];
+    [alert show] ;
+
+}
+
+// This methods will:
+// -- validate user inputs --> simply bring them back to WellCome view
+// -- ask the Store to do create a contact if validation pass
 - (IBAction)joinList {
     
     // create the new contact
@@ -66,8 +85,7 @@
     // Validate users' inputs
     if ([self.first_name.text length] > 50 || [self.last_name.text length] > 50)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid nput" message:@"Please make sure first name and last name is less than 50 characters" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil,nil];
-        [alert show] ;
+        [self alert:@"Invalid Name" withMessage:@"Please enter valid first name and last name, each of them should not be longer than 50 characters"];
         self.first_name.text = @"" ;
         self.last_name.text = @"" ;
         valid_inputs = NO ;
@@ -75,16 +93,15 @@
     else if ([self.first_name.text isEqualToString:@""] ||
              [self.last_name.text isEqualToString:@""] )
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid nput" message:@"Missing required name's fields" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil,nil];
-        [alert show] ;
+ 
+        [self alert:@"Invalid input" withMessage:@"Missing required name's fields"] ;
         self.first_name.text = @"" ;
         self.last_name.text = @"" ;
         valid_inputs = NO ;
     }
     else if ( ! [self validateEmail:self.email.text] )
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid nput" message:@"Please enter a valiid email" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil,nil];
-        [alert show] ;
+        [self alert:@"Invalid input" withMessage:@"Please enter a valiid email"] ;
         self.email.text = @"" ;
         valid_inputs = NO ;
     }

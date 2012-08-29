@@ -9,11 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ACContactListStore.h"
 
-@class ACContactListTableViewController ;
-
-
-
-
 @interface ACContactListTableViewController : UITableViewController
     <UITableViewDataSource, UITableViewDelegate>
 

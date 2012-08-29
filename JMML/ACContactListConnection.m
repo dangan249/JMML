@@ -46,10 +46,12 @@ static NSMutableArray *sharedContactListConnectionList = nil;
         [self.manager.mappingProvider setObjectMapping:contactListMap forResourcePathPattern:@"/lists"] ;
         
         // If this is the first connection started, create the array
+    
         if(!sharedContactListConnectionList)
             sharedContactListConnectionList = [[NSMutableArray alloc] init];
         // Add the connection to the array so it doesn't get destroyed
         [sharedContactListConnectionList addObject:self];
+        
     }
     return self ;
     

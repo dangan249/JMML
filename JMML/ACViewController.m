@@ -24,11 +24,12 @@
 
 @synthesize shared_oauth = _shared_oauth ;
 
+#pragma mark - Life Cycle Methods
+// Before the view is loaded, we do some initial set up required by Google GTM Oauth
 - (void)viewDidLoad
 {
     
     [super viewDidLoad];
-    
     
     // create the shared_oauth
     // From Google:
@@ -58,6 +59,7 @@
     [[self navigationController] setNavigationBarHidden:YES] ;
 }
 
+// This method associate with LogIn button and will kick off authentication process
 - (IBAction)logIn {
     
     // Display the authentication view

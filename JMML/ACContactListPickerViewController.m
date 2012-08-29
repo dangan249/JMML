@@ -23,6 +23,7 @@
 @synthesize delegate = _delegate ;
 @synthesize shared_contact_list_store = _shared_contact_list_store ;
 
+#pragma mark - Life Cycle Methods
 
 - (void)viewDidLoad
 {

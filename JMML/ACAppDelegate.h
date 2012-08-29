@@ -13,7 +13,7 @@
 @interface ACAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) NSString *access_token ;
-@property (strong, nonatomic) ACContact *contactToDisplay ;
+@property (strong, nonatomic) NSString *access_token ; // access_token shared by many RESTful calss
+@property (strong, nonatomic) ACContact *contactToDisplay ; // this is the specific contact that user wanna check out its details
 
 @end

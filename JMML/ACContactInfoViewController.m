@@ -22,6 +22,8 @@
 @synthesize secondState = _secondState ;
 @synthesize secondCountry = _secondCountry ;
 
+#pragma mark - Life Cycle Methods
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

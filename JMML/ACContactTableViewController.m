@@ -26,6 +26,8 @@
 @synthesize choosenList = _choosenList ;
 @synthesize choosenContact = _choosenContact ;
 
+#pragma mark - Life Cycle Methods
+
 // viewDidLoad contains codes that pick (filter) all Contacts in a specific ContactList
 -(void) viewDidLoad{
     [super viewDidLoad] ;
@@ -65,15 +67,15 @@
     [[self navigationController] setNavigationBarHidden:NO] ;
 }
 
-// If you don't understand these data source + delegate's methods
-// Please do some research about how to set up UITableViewController
 #pragma mark - UITableViewDataSource
 
+// return the number of Contacts
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.allContactInChoosenList count ] ;
 }
 
+// return each Contact for each row
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Contact";
@@ -93,6 +95,7 @@
 } 
 
 #pragma mark - UITableViewDelegate
+// each row ( represent a Contact) get selected and the code will bring user to the view that show some details of the contact
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [[self navigationController] setNavigationBarHidden:NO] ;
@@ -103,6 +106,7 @@
     [self performSegueWithIdentifier:@"viewContactDetails" sender:self] ;
 }
 
+// Preparation prior segue-ing to a new screen
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     if( [segue.identifier isEqualToString:@"viewContactDetails"]){
